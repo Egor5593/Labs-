@@ -1,0 +1,21 @@
+@startuml
+class Context {
+
+}
+ 
+interface IStrategy {
+    void Execute()
+}
+
+class ConcreteStrategyA {
+    void Execute()
+}
+
+class ConcreteStrategyB {
+    void Execute()
+}
+
+Context o-- IStrategy
+IStrategy <|-- ConcreteStrategyA
+IStrategy <|-- ConcreteStrategyB
+@enduml

@@ -1,0 +1,96 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM        19/Apr/2025  11:51:18
+// Copyright 1999-2022 IAR Systems AB.
+//
+//    Cpu mode     =  thumb
+//    Endian       =  little
+//    Source file  =  C:\projects\micro\RtosWrapper\MyTasks\LedTask.cpp
+//    Command line =
+//        -f C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks\LedTask.o.rsp
+//        (C:\projects\micro\RtosWrapper\MyTasks\LedTask.cpp -lC
+//        C:\projects\micro\RtosWrapper\Debug\List\MyTasks -lA
+//        C:\projects\micro\RtosWrapper\Debug\List\MyTasks -o
+//        C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks --no_cse --no_unroll
+//        --no_inline --no_code_motion --no_tbaa --no_clustering
+//        --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e
+//        --fpu=VFPv4_sp --dlib_config "C:\Program Files\IAR Systems\Embedded
+//        Workbench 9.1\arm\inc\c\DLib_Config_Normal.h" -I
+//        C:\projects\micro\RtosWrapper\Rtos\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\wrapper\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\wrapper\FreeRtos\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\include\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\Common\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ARM_CM4F\ -I
+//        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\MemMang\ -I
+//        C:\projects\micro\RtosWrapper\MyTasks\ -I
+//        C:\projects\micro\RtosWrapper\Common\ -I
+//        C:\projects\micro\RtosWrapper\CMSIS\ -I
+//        C:\projects\micro\RtosWrapper\Application\ -I
+//        C:\projects\micro\RtosWrapper\Application\Diagnostic\ -I
+//        C:\projects\micro\RtosWrapper\AHardware\ -I
+//        C:\projects\micro\RtosWrapper\AHardware\GpioPort\ -I
+//        C:\projects\micro\RtosWrapper\AHardware\IrqController\ -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Pin\ -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+//        -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\
+//        -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\
+//        -I C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Port\
+//        -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Atomic\
+//        -I C:\projects\micro\RtosWrapper\..\CortexLib\Common\ -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\Common\Singleton\ -I
+//        C:\projects\micro\RtosWrapper\..\CortexLib\Common\RomObject\ -I
+//        C:\projects\micro\RtosWrapper\Application\Implementation\ -I
+//        C:\projects\micro\RtosWrapper\Application\Contracts\ -I
+//        C:\projects\micro\RtosWrapper\Application\Implementation\Modes\ -Ol
+//        --c++ --no_exceptions --no_rtti) --dependencies=n
+//        C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks\LedTask.o.d
+//    Locale       =  C
+//    List file    =
+//        C:\projects\micro\RtosWrapper\Debug\List\MyTasks\LedTask.s
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        RTMODEL "__CPP_Exceptions", "Disabled"
+        RTMODEL "__CPP_Language", "C++14"
+        RTMODEL "__CPP_Library", "DLib"
+        RTMODEL "__CPP_Runtime", "1"
+        RTMODEL "__SystemLibrary", "DLib"
+        AAPCS BASE,INTERWORK,VFP
+        PRESERVE8
+        REQUIRE8
+
+        #define SHT_PROGBITS 0x1
+
+
+        SECTION `.iar_vfe_header`:DATA:NOALLOC:NOROOT(2)
+        SECTION_TYPE SHT_PROGBITS, 0
+        DATA
+        DC32 0
+
+        END
+// C:\projects\micro\RtosWrapper\MyTasks\LedTask.cpp
+//    1 /*
+//    2 #include "LedTask.hpp"
+//    3 
+//    4 void LedTask::Execute()
+//    5 {
+//    6   for (;;)
+//    7   {
+//    8     Sleep(mDelay);
+//    9     mLed.Toggle();
+//   10   }
+//   11 }
+//   12 */
+// 
+// 
+// 0 bytes of memory
+//
+//Errors: none
+//Warnings: none

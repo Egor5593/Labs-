@@ -1,0 +1,230 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         19/Apr/2025  11:28:32
+# Copyright 1999-2022 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\projects\micro\RtosWrapper\MyTasks\LedManager.cpp
+#    Command line                 =
+#        -f C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks\LedManager.o.rsp
+#        (C:\projects\micro\RtosWrapper\MyTasks\LedManager.cpp -lC
+#        C:\projects\micro\RtosWrapper\Debug\List\MyTasks -lA
+#        C:\projects\micro\RtosWrapper\Debug\List\MyTasks -o
+#        C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks --no_cse --no_unroll
+#        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
+#        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
+#        --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.1\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\projects\micro\RtosWrapper\Rtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\wrapper\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\wrapper\FreeRtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\include\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\Common\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ARM_CM4F\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\MemMang\ -I
+#        C:\projects\micro\RtosWrapper\MyTasks\ -I
+#        C:\projects\micro\RtosWrapper\Common\ -I
+#        C:\projects\micro\RtosWrapper\CMSIS\ -I
+#        C:\projects\micro\RtosWrapper\Application\ -I
+#        C:\projects\micro\RtosWrapper\Application\Diagnostic\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\GpioPort\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\IrqController\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Pin\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Port\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Atomic\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\Common\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\Common\Singleton\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\Common\RomObject\ -I
+#        C:\projects\micro\RtosWrapper\Application\Implementation\ -I
+#        C:\projects\micro\RtosWrapper\Application\Contracts\ -I
+#        C:\projects\micro\RtosWrapper\Application\Implementation\Modes\ -Ol
+#        --c++ --no_exceptions --no_rtti) --dependencies=n
+#        C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks\LedManager.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\projects\micro\RtosWrapper\Debug\List\MyTasks\LedManager.lst
+#    Object file                  =
+#        C:\projects\micro\RtosWrapper\Debug\Obj\MyTasks\LedManager.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\projects\micro\RtosWrapper\MyTasks\LedManager.cpp
+      1          #include "LedManager.hpp"
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::TicksPerSecond std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+   \                     _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \        0x6   0x220A             MOVS     R2,#+10
+   \        0x8   0x2300             MOVS     R3,#+0
+   \        0xA   0x.... 0x....      BL       __aeabi_ldivmod
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x4669             MOV      R1,SP
+   \       0x12   0xA801             ADD      R0,SP,#+4
+   \       0x14   0x.... 0x....      BL       _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_
+   \       0x18   0x9801             LDR      R0,[SP, #+4]
+   \       0x1A   0xBD0E             POP      {R1-R3,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+   \                     _ZNSt6chrono8durationIjSt5ratioILx10ELx1000EEEC1IjvEERKT_: (+1)
+   \        0x0   0x6809             LDR      R1,[R1, #+0]
+   \        0x2   0x6001             STR      R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+   \                     _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp bool OsWrapper::RtosWrapper::wMailBoxGet(void * &, void *, uint32_t)
+   \                     _ZN9OsWrapper11RtosWrapper11wMailBoxGetERPvS1_j: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x2300             MOVS     R3,#+0
+   \        0x4   0x6800             LDR      R0,[R0, #+0]
+   \        0x6   0x.... 0x....      BL       xQueueGenericReceive
+   \        0xA   0x2801             CMP      R0,#+1
+   \        0xC   0xD101             BNE.N    ??wMailBoxGet_0
+   \        0xE   0x2001             MOVS     R0,#+1
+   \       0x10   0xE000             B.N      ??wMailBoxGet_1
+   \                     ??wMailBoxGet_0: (+1)
+   \       0x12   0x2000             MOVS     R0,#+0
+   \                     ??wMailBoxGet_1: (+1)
+   \       0x14   0xB2C0             UXTB     R0,R0
+   \       0x16   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp bool OsWrapper::MailBox<bool, 1U>::Get(bool &, std::chrono::milliseconds)
+   \                     _ZN9OsWrapper7MailBoxIbLj1EE3GetERbNSt6chrono8durationIxSt5ratioILx1ELx1000EEEE: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0xB40F             PUSH     {R0-R3}
+   \        0x4   0x0004             MOVS     R4,R0
+   \        0x6   0x000D             MOVS     R5,R1
+   \        0x8   0xA802             ADD      R0,SP,#+8
+   \        0xA   0x.... 0x....      BL       _ZNSt6chrono13duration_castINS_8durationIjSt5ratioILx10ELx1000EEEExS2_ILx1ELx1000EEEENSt9enable_ifIXsr3std6chrono12_Is_durationIT_EE5valueES7_E4typeERKNS1_IT0_T1_EE
+   \        0xE   0x9000             STR      R0,[SP, #+0]
+   \       0x10   0x4668             MOV      R0,SP
+   \       0x12   0x.... 0x....      BL       _ZNKSt6chrono8durationIjSt5ratioILx10ELx1000EEE5countEv
+   \       0x16   0x0002             MOVS     R2,R0
+   \       0x18   0x0029             MOVS     R1,R5
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper11wMailBoxGetERPvS1_j
+   \       0x20   0xB005             ADD      SP,SP,#+20
+   \       0x22   0xBD30             POP      {R4,R5,PC}
+      2          #include "mailbox.hpp"
+      3          #include "ButtonTask.h"
+      4          
+      5          
+
+   \                                 In section .text, align 2, keep-with-next
+      6          void LedManager::Execute()
+      7          {
+   \                     _ZN10LedManager7ExecuteEv: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+      8            for (;;)
+      9            {
+     10              bool isPressed = false;
+   \                     ??Execute_0: (+1)
+   \        0x4   0x2000             MOVS     R0,#+0
+   \        0x6   0xF88D 0x0000      STRB     R0,[SP, #+0]
+     11              if (mMailBox.Get(isPressed, mDelay))
+   \        0xA   0xF514 0x608C      ADDS     R0,R4,#+1120
+   \        0xE   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x12   0x4669             MOV      R1,SP
+   \       0x14   0xF8D4 0x046C      LDR      R0,[R4, #+1132]
+   \       0x18   0x.... 0x....      BL       _ZN9OsWrapper7MailBoxIbLj1EE3GetERbNSt6chrono8durationIxSt5ratioILx1ELx1000EEEE
+   \       0x1C   0x2800             CMP      R0,#+0
+   \       0x1E   0xD006             BEQ.N    ??Execute_1
+     12              {  
+     13                mMode.SetNextMode();
+   \       0x20   0xF8D4 0x0468      LDR      R0,[R4, #+1128]
+   \       0x24   0xF8D4 0x1468      LDR      R1,[R4, #+1128]
+   \       0x28   0x6809             LDR      R1,[R1, #+0]
+   \       0x2A   0x6849             LDR      R1,[R1, #+4]
+   \       0x2C   0x4788             BLX      R1
+     14              }
+     15              mMode.Update();
+   \                     ??Execute_1: (+1)
+   \       0x2E   0xF8D4 0x0468      LDR      R0,[R4, #+1128]
+   \       0x32   0xF8D4 0x1468      LDR      R1,[R4, #+1128]
+   \       0x36   0x6809             LDR      R1,[R1, #+0]
+   \       0x38   0x6889             LDR      R1,[R1, #+8]
+   \       0x3A   0x4788             BLX      R1
+   \       0x3C   0xE7E2             B.N      ??Execute_0
+     16            }
+     17          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   LedManager::Execute()
+        16   -- Indirect call
+        16   -> OsWrapper::MailBox<bool, 1U>::Get(bool &, std::chrono::milliseconds)
+      32   OsWrapper::MailBox<bool, 1U>::Get(bool &, std::chrono::milliseconds)
+        32   -> OsWrapper::RtosWrapper::wMailBoxGet(void * &, void *, uint32_t)
+        32   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+        32   -> std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+       8   OsWrapper::RtosWrapper::wMailBoxGet(void * &, void *, uint32_t)
+         8   -> xQueueGenericReceive
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+       0   std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+      16   std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+        16   -> std::chrono::duration<__int64_t, std::milli>::count() const
+        16   -> std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+        16 __aeabi_ldivmod
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      62  LedManager::Execute()
+      36  OsWrapper::MailBox<bool, 1U>::Get(bool &, std::chrono::milliseconds)
+      24  OsWrapper::RtosWrapper::wMailBoxGet(void * &, void *, uint32_t)
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       4  std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::count() const
+       6  std::chrono::duration<uint32_t, std::ratio<10LL, 1'000LL>>::duration<uint32_t, void>(uint32_t const &)
+      28  std::chrono::duration_cast<OsWrapper::TicksPerSecond, __int64_t, std::milli>(std::chrono::duration<__int64_t, std::milli> const &)
+     160  -- Other
+
+ 
+ 160 bytes in section .rodata
+ 166 bytes in section .text
+ 
+ 62 bytes of CODE  memory (+ 104 bytes shared)
+  0 bytes of CONST memory (+ 160 bytes shared)
+
+Errors: none
+Warnings: none

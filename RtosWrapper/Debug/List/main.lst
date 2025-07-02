@@ -1,0 +1,1841 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.30.1.335/W64 for ARM         07/Jun/2025  11:47:12
+# Copyright 1999-2022 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =  C:\projects\micro\RtosWrapper\main.cpp
+#    Command line                 =
+#        -f C:\projects\micro\RtosWrapper\Debug\Obj\main.o.rsp
+#        (C:\projects\micro\RtosWrapper\main.cpp -lC
+#        C:\projects\micro\RtosWrapper\Debug\List\ -lA
+#        C:\projects\micro\RtosWrapper\Debug\List\ -o
+#        C:\projects\micro\RtosWrapper\Debug\Obj\ --no_cse --no_unroll
+#        --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling
+#        --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp
+#        --dlib_config "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.1\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\projects\micro\RtosWrapper\Rtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\wrapper\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\wrapper\FreeRtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\include\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\Common\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\IAR\ARM_CM4F\ -I
+#        C:\projects\micro\RtosWrapper\Rtos\FreeRtos\portable\MemMang\ -I
+#        C:\projects\micro\RtosWrapper\MyTasks\ -I
+#        C:\projects\micro\RtosWrapper\Common\ -I
+#        C:\projects\micro\RtosWrapper\CMSIS\ -I
+#        C:\projects\micro\RtosWrapper\Application\ -I
+#        C:\projects\micro\RtosWrapper\Application\Diagnostic\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\GpioPort\ -I
+#        C:\projects\micro\RtosWrapper\AHardware\IrqController\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Pin\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\FieldValues\
+#        -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\STM32F411\
+#        -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Registers\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Port\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\AbstractHardware\Atomic\
+#        -I C:\projects\micro\RtosWrapper\..\CortexLib\Common\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\Common\Singleton\ -I
+#        C:\projects\micro\RtosWrapper\..\CortexLib\Common\RomObject\ -I
+#        C:\projects\micro\RtosWrapper\Application\Implementation\ -I
+#        C:\projects\micro\RtosWrapper\Application\Contracts\ -I
+#        C:\projects\micro\RtosWrapper\Application\Implementation\Modes\ -On
+#        --c++ --no_exceptions --no_rtti) --dependencies=n
+#        C:\projects\micro\RtosWrapper\Debug\Obj\main.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\projects\micro\RtosWrapper\Debug\List\main.lst
+#    Object file                  =
+#        C:\projects\micro\RtosWrapper\Debug\Obj\main.o
+#    Runtime model:                  
+#      __CPP_Exceptions           =  Disabled
+#      __CPP_Language             =  C++14
+#      __CPP_Library              =  DLib
+#      __CPP_Runtime              =  1
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\projects\micro\RtosWrapper\main.cpp
+      1          #include "rtos.hpp"         // for Rtos
+
+   \                                 In section .text, align 2
+   \   __vfp ILedToggleable **std::_Addressof<ILedToggleable *>(ILedToggleable *&, std::false_type) noexcept
+   \                     _ZSt10_AddressofIP14ILedToggleableEPT_RS2_St17integral_constantIbLb0EE: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp ILedToggleable **std::addressof<ILedToggleable *>(ILedToggleable *&) noexcept
+   \                     _ZSt9addressofIP14ILedToggleableEPT_RS2_: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4802             LDR.N    R0,??addressof_0
+   \        0x6   0x7801             LDRB     R1,[R0, #+0]
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       _ZSt10_AddressofIP14ILedToggleableEPT_RS2_St17integral_constantIbLb0EE
+   \        0xE   0xBD10             POP      {R4,PC}
+   \                     ??addressof_0:
+   \       0x10   0x....'....        DC32     ?_3
+
+   \                                 In section .text, align 2
+   \   __vfp std::_Array_const_iterator<ILedToggleable *, 4U>::_Array_const_iterator(ILedToggleable *const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEC1EPKS1_j: (+1)
+   \        0x0   0xEB01 0x0382      ADD      R3,R1,R2, LSL #+2
+   \        0x4   0x6003             STR      R3,[R0, #+0]
+   \        0x6   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp std::_Array_const_iterator<ILedToggleable *, 4U>::subobject _Array_const_iterator(ILedToggleable *const *, size_t)
+   \                     _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEC2EPKS1_j: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEC1EPKS1_j
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp ILedToggleable *const & std::_Array_const_iterator<ILedToggleable *, 4U>::operator*() const
+   \                     _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEdeEv: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp std::_Array_const_iterator<ILedToggleable *, 4U> &std::_Array_const_iterator<ILedToggleable *, 4U>::operator++()
+   \                     _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEppEv: (+1)
+   \        0x0   0x6801             LDR      R1,[R0, #+0]
+   \        0x2   0x1D09             ADDS     R1,R1,#+4
+   \        0x4   0x6001             STR      R1,[R0, #+0]
+   \        0x6   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp bool std::_Array_const_iterator<ILedToggleable *, 4U>::operator==(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+   \                     _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEeqERKS2_: (+1)
+   \        0x0   0x6800             LDR      R0,[R0, #+0]
+   \        0x2   0x6809             LDR      R1,[R1, #+0]
+   \        0x4   0x4288             CMP      R0,R1
+   \        0x6   0xD101             BNE.N    `??operator==_0`
+   \        0x8   0x2001             MOVS     R0,#+1
+   \        0xA   0xE000             B.N      `??operator==_1`
+   \                     `??operator==_0`: (+1)
+   \        0xC   0x2000             MOVS     R0,#+0
+   \                     `??operator==_1`: (+1)
+   \        0xE   0xB2C0             UXTB     R0,R0
+   \       0x10   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp bool std::_Array_const_iterator<ILedToggleable *, 4U>::operator!=(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+   \                     _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEneERKS2_: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0029             MOVS     R1,R5
+   \        0x8   0x0020             MOVS     R0,R4
+   \        0xA   0x.... 0x....      BL       _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEeqERKS2_
+   \        0xE   0x2800             CMP      R0,#+0
+   \       0x10   0xD101             BNE.N    `??operator!=_0`
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0xE000             B.N      `??operator!=_1`
+   \                     `??operator!=_0`: (+1)
+   \       0x16   0x2000             MOVS     R0,#+0
+   \                     `??operator!=_1`: (+1)
+   \       0x18   0xB2C0             UXTB     R0,R0
+   \       0x1A   0xBD32             POP      {R1,R4,R5,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::_Array_iterator<ILedToggleable *, 4U>::_Array_iterator(ILedToggleable **, size_t)
+   \                     _ZNSt15_Array_iteratorIP14ILedToggleableLj4EEC1EPS1_j: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x0032             MOVS     R2,R6
+   \        0xA   0x0029             MOVS     R1,R5
+   \        0xC   0x0020             MOVS     R0,R4
+   \        0xE   0x.... 0x....      BL       _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEC2EPKS1_j
+   \       0x12   0x0020             MOVS     R0,R4
+   \       0x14   0xBD70             POP      {R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp ILedToggleable *& std::_Array_iterator<ILedToggleable *, 4U>::operator*() const
+   \                     _ZNKSt15_Array_iteratorIP14ILedToggleableLj4EEdeEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEdeEv
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::_Array_iterator<ILedToggleable *, 4U> &std::_Array_iterator<ILedToggleable *, 4U>::operator++()
+   \                     _ZNSt15_Array_iteratorIP14ILedToggleableLj4EEppEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZNSt21_Array_const_iteratorIP14ILedToggleableLj4EEppEv
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::array<ILedToggleable *, 4U>::iterator std::array<ILedToggleable *, 4U>::begin() noexcept
+   \                     _ZNSt5arrayIP14ILedToggleableLj4EE5beginEv: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZSt9addressofIP14ILedToggleableEPT_RS2_
+   \        0xA   0x0001             MOVS     R1,R0
+   \        0xC   0x2200             MOVS     R2,#+0
+   \        0xE   0x4668             MOV      R0,SP
+   \       0x10   0x.... 0x....      BL       _ZNSt15_Array_iteratorIP14ILedToggleableLj4EEC1EPS1_j
+   \       0x14   0x9800             LDR      R0,[SP, #+0]
+   \       0x16   0xBD16             POP      {R1,R2,R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp std::array<ILedToggleable *, 4U>::iterator std::array<ILedToggleable *, 4U>::end() noexcept
+   \                     _ZNSt5arrayIP14ILedToggleableLj4EE3endEv: (+1)
+   \        0x0   0xB51C             PUSH     {R2-R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZSt9addressofIP14ILedToggleableEPT_RS2_
+   \        0xA   0x0001             MOVS     R1,R0
+   \        0xC   0x2204             MOVS     R2,#+4
+   \        0xE   0x4668             MOV      R0,SP
+   \       0x10   0x.... 0x....      BL       _ZNSt15_Array_iteratorIP14ILedToggleableLj4EEC1EPS1_j
+   \       0x14   0x9800             LDR      R0,[SP, #+0]
+   \       0x16   0xBD16             POP      {R1,R2,R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp ILedToggleable *& std::array<ILedToggleable *, 4U>::operator[](size_t)
+   \                     _ZNSt5arrayIP14ILedToggleableLj4EEixEj: (+1)
+   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp IMode *& std::array<IMode *, 2U>::operator[](size_t)
+   \                     _ZNSt5arrayIP5IModeLj2EEixEj: (+1)
+   \        0x0   0xEB00 0x0081      ADD      R0,R0,R1, LSL #+2
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t *std::array<uint32_t, 256U>::data() noexcept
+   \                     _ZNSt5arrayIjLj256EE4dataEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp uint8_t *std::array<uint8_t, 1U>::data() noexcept
+   \                     _ZNSt5arrayIhLj1EE4dataEv: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp __int64_t std::chrono::duration<__int64_t, std::milli>::count() const
+   \                     _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv: (+1)
+   \        0x0   0xE9D0 0x0100      LDRD     R0,R1,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE14LedManagerTaskEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xE92D 0x41FF      PUSH     {R0-R8,LR}
+   \        0x4   0x0005             MOVS     R5,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0017             MOVS     R7,R2
+   \        0xA   0x4698             MOV      R8,R3
+   \        0xC   0x9C0A             LDR      R4,[SP, #+40]
+   \        0xE   0x2C00             CMP      R4,#+0
+   \       0x10   0xD00D             BEQ.N    ??wCreateThread_3
+   \       0x12   0x1D28             ADDS     R0,R5,#+4
+   \       0x14   0x9002             STR      R0,[SP, #+8]
+   \       0x16   0x9401             STR      R4,[SP, #+4]
+   \       0x18   0x0038             MOVS     R0,R7
+   \       0x1A   0xB2C0             UXTB     R0,R0
+   \       0x1C   0x9000             STR      R0,[SP, #+0]
+   \       0x1E   0x002B             MOVS     R3,R5
+   \       0x20   0x4642             MOV      R2,R8
+   \       0x22   0xB292             UXTH     R2,R2
+   \       0x24   0x0031             MOVS     R1,R6
+   \       0x26   0x4803             LDR.N    R0,??wCreateThread_0
+   \       0x28   0x.... 0x....      BL       xTaskCreateStatic
+   \       0x2C   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_3: (+1)
+   \       0x2E   0xE8BD 0x81FF      POP      {R0-R8,PC}
+   \       0x32   0xBF00             Nop
+   \                     ??wCreateThread_0:
+   \       0x34   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 4
+   \   __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE10ButtonTaskEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xE92D 0x41FF      PUSH     {R0-R8,LR}
+   \        0x4   0x0005             MOVS     R5,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0017             MOVS     R7,R2
+   \        0xA   0x4698             MOV      R8,R3
+   \        0xC   0x9C0A             LDR      R4,[SP, #+40]
+   \        0xE   0x2C00             CMP      R4,#+0
+   \       0x10   0xD00D             BEQ.N    ??wCreateThread_4
+   \       0x12   0x1D28             ADDS     R0,R5,#+4
+   \       0x14   0x9002             STR      R0,[SP, #+8]
+   \       0x16   0x9401             STR      R4,[SP, #+4]
+   \       0x18   0x0038             MOVS     R0,R7
+   \       0x1A   0xB2C0             UXTB     R0,R0
+   \       0x1C   0x9000             STR      R0,[SP, #+0]
+   \       0x1E   0x002B             MOVS     R3,R5
+   \       0x20   0x4642             MOV      R2,R8
+   \       0x22   0xB292             UXTH     R2,R2
+   \       0x24   0x0031             MOVS     R1,R6
+   \       0x26   0x4803             LDR.N    R0,??wCreateThread_1
+   \       0x28   0x.... 0x....      BL       xTaskCreateStatic
+   \       0x2C   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_4: (+1)
+   \       0x2E   0xE8BD 0x81FF      POP      {R0-R8,PC}
+   \       0x32   0xBF00             Nop
+   \                     ??wCreateThread_1:
+   \       0x34   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 4
+   \   __vfp void OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+   \                     _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE11MeasureTaskEEvRT0_PKcNS_14ThreadPriorityEtPj: (+1)
+   \        0x0   0xE92D 0x41FF      PUSH     {R0-R8,LR}
+   \        0x4   0x0005             MOVS     R5,R0
+   \        0x6   0x000E             MOVS     R6,R1
+   \        0x8   0x0017             MOVS     R7,R2
+   \        0xA   0x4698             MOV      R8,R3
+   \        0xC   0x9C0A             LDR      R4,[SP, #+40]
+   \        0xE   0x2C00             CMP      R4,#+0
+   \       0x10   0xD00D             BEQ.N    ??wCreateThread_5
+   \       0x12   0x1D28             ADDS     R0,R5,#+4
+   \       0x14   0x9002             STR      R0,[SP, #+8]
+   \       0x16   0x9401             STR      R4,[SP, #+4]
+   \       0x18   0x0038             MOVS     R0,R7
+   \       0x1A   0xB2C0             UXTB     R0,R0
+   \       0x1C   0x9000             STR      R0,[SP, #+0]
+   \       0x1E   0x002B             MOVS     R3,R5
+   \       0x20   0x4642             MOV      R2,R8
+   \       0x22   0xB292             UXTH     R2,R2
+   \       0x24   0x0031             MOVS     R1,R6
+   \       0x26   0x4803             LDR.N    R0,??wCreateThread_2
+   \       0x28   0x.... 0x....      BL       xTaskCreateStatic
+   \       0x2C   0x6568             STR      R0,[R5, #+84]
+   \                     ??wCreateThread_5: (+1)
+   \       0x2E   0xE8BD 0x81FF      POP      {R0-R8,PC}
+   \       0x32   0xBF00             Nop
+   \                     ??wCreateThread_2:
+   \       0x34   0x....'....        DC32     _ZN9OsWrapper4Rtos3RunEPv
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::RtosWrapper::wStart()
+   \                     _ZN9OsWrapper11RtosWrapper6wStartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       vTaskStartScheduler
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp uint32_t OsWrapper::RtosWrapper::wGetTicks()
+   \                     _ZN9OsWrapper11RtosWrapper9wGetTicksEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       xTaskGetTickCount
+   \        0x6   0xBD02             POP      {R1,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void * OsWrapper::RtosWrapper::wMailBoxCreate(uint16_t, uint16_t, uint8_t *, StaticQueue_t &)
+   \                     _ZN9OsWrapper11RtosWrapper14wMailBoxCreateEttPhR13xSTATIC_QUEUE: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0x001F             MOVS     R7,R3
+   \        0xA   0x2000             MOVS     R0,#+0
+   \        0xC   0x9000             STR      R0,[SP, #+0]
+   \        0xE   0x003B             MOVS     R3,R7
+   \       0x10   0x0032             MOVS     R2,R6
+   \       0x12   0x0029             MOVS     R1,R5
+   \       0x14   0xB289             UXTH     R1,R1
+   \       0x16   0x0020             MOVS     R0,R4
+   \       0x18   0xB280             UXTH     R0,R0
+   \       0x1A   0x.... 0x....      BL       xQueueGenericCreateStatic
+   \       0x1E   0xBDF2             POP      {R1,R4-R7,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::RtosWrapper::wMailBoxDelete(void * &)
+   \                     _ZN9OsWrapper11RtosWrapper14wMailBoxDeleteERPv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6820             LDR      R0,[R4, #+0]
+   \        0x6   0x.... 0x....      BL       vQueueDelete
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::IThread::subobject IThread() noexcept
+   \                     _ZN9OsWrapper7IThreadC2Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper7IThreadC1Ev
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::IThread::IThread() noexcept
+   \                     _ZN9OsWrapper7IThreadC1Ev: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x6541             STR      R1,[R0, #+84]
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x6581             STR      R1,[R0, #+88]
+   \        0x8   0x4770             BX       LR
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::IThread::Run()
+   \                     _ZN9OsWrapper7IThread3RunEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper9wGetTicksEv
+   \        0x8   0x65A0             STR      R0,[R4, #+88]
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0x6821             LDR      R1,[R4, #+0]
+   \        0xE   0x6809             LDR      R1,[R1, #+0]
+   \       0x10   0x4788             BLX      R1
+   \       0x12   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::Thread<256U>::subobject Thread() noexcept
+   \                     _ZN9OsWrapper6ThreadILj256EEC2Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj256EEC1Ev
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::Thread<256U>::Thread() noexcept
+   \                     _ZN9OsWrapper6ThreadILj256EEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper7IThreadC2Ev
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::CreateThread<LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI14LedManagerTaskEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x.... 0x....      BL       _ZNSt5arrayIjLj256EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0xF44F 0x7380      MOV      R3,#+256
+   \       0x16   0x0032             MOVS     R2,R6
+   \       0x18   0xB2D2             UXTB     R2,R2
+   \       0x1A   0x0029             MOVS     R1,R5
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE14LedManagerTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x22   0xBD73             POP      {R0,R1,R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::CreateThread<ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI10ButtonTaskEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x.... 0x....      BL       _ZNSt5arrayIjLj256EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0xF44F 0x7380      MOV      R3,#+256
+   \       0x16   0x0032             MOVS     R2,R6
+   \       0x18   0xB2D2             UXTB     R2,R2
+   \       0x1A   0x0029             MOVS     R1,R5
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE10ButtonTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x22   0xBD73             POP      {R0,R1,R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::CreateThread<MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority)
+   \                     _ZN9OsWrapper4Rtos12CreateThreadI11MeasureTaskEEvRT_PKcNS_14ThreadPriorityE: (+1)
+   \        0x0   0xB57C             PUSH     {R2-R6,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x000D             MOVS     R5,R1
+   \        0x6   0x0016             MOVS     R6,R2
+   \        0x8   0xF114 0x005C      ADDS     R0,R4,#+92
+   \        0xC   0x.... 0x....      BL       _ZNSt5arrayIjLj256EE4dataEv
+   \       0x10   0x9000             STR      R0,[SP, #+0]
+   \       0x12   0xF44F 0x7380      MOV      R3,#+256
+   \       0x16   0x0032             MOVS     R2,R6
+   \       0x18   0xB2D2             UXTB     R2,R2
+   \       0x1A   0x0029             MOVS     R1,R5
+   \       0x1C   0x0020             MOVS     R0,R4
+   \       0x1E   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper13wCreateThreadINS_4RtosE11MeasureTaskEEvRT0_PKcNS_14ThreadPriorityEtPj
+   \       0x22   0xBD73             POP      {R0,R1,R4-R6,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::Start()
+   \                     _ZN9OsWrapper4Rtos5StartEv: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper6wStartEv
+   \        0x6   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp void OsWrapper::Rtos::Run(void *)
+   \                     _ZN9OsWrapper4Rtos3RunEPv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper7IThread3RunEv
+   \        0xA   0xBD10             POP      {R4,PC}
+      2          #include "mailbox.hpp"      // for Mailbox
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::MailBox<bool, 1U>::MailBox()
+   \                     _ZN9OsWrapper7MailBoxIbLj1EEC1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0xF114 0x004C      ADDS     R0,R4,#+76
+   \        0x8   0x.... 0x....      BL       _ZNSt5arrayIhLj1EE4dataEv
+   \        0xC   0x0002             MOVS     R2,R0
+   \        0xE   0x1D23             ADDS     R3,R4,#+4
+   \       0x10   0x2101             MOVS     R1,#+1
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper14wMailBoxCreateEttPhR13xSTATIC_QUEUE
+   \       0x18   0x6020             STR      R0,[R4, #+0]
+   \       0x1A   0x0020             MOVS     R0,R4
+   \       0x1C   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp OsWrapper::MailBox<bool, 1U>::~MailBox() noexcept
+   \                     _ZN9OsWrapper7MailBoxIbLj1EED1Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN9OsWrapper11RtosWrapper14wMailBoxDeleteERPv
+   \        0xA   0x0020             MOVS     R0,R4
+   \        0xC   0xBD10             POP      {R4,PC}
+      3          #include "event.hpp"        // for Event
+      4          #include "LedTask.hpp"      // for LedTask
+      5          #include "appconfig.h"      // for led1, 2, 3, 4;
+
+   \                                 In section .text, align 4
+   \   __vfp bool Button<1'073'874'960U, 13U, true>::IsPressed()
+   \                     _ZN6ButtonILj1073874960ELj13ELb1EE9IsPressedEv: (+1)
+   \        0x0   0x0001             MOVS     R1,R0
+   \        0x2   0x4804             LDR.N    R0,??IsPressed_0
+   \        0x4   0x6800             LDR      R0,[R0, #+0]
+   \        0x6   0x0B40             LSRS     R0,R0,#+13
+   \        0x8   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xC   0xF090 0x0001      EORS     R0,R0,#0x1
+   \       0x10   0xB2C0             UXTB     R0,R0
+   \       0x12   0x4770             BX       LR
+   \                     ??IsPressed_0:
+   \       0x14   0x4002'0810        DC32     0x40020810
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'872'916U, 5U>::Toggle()
+   \                     _ZN3LedILj1073872916ELj5EE6ToggleEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_0
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF092 0x0220      EORS     R2,R2,#0x20
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Toggle_0:
+   \        0xC   0x4002'0014        DC32     0x40020014
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 9U>::Toggle()
+   \                     _ZN3LedILj1073874964ELj9EE6ToggleEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_1
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF492 0x7200      EORS     R2,R2,#0x200
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Toggle_1:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 8U>::Toggle()
+   \                     _ZN3LedILj1073874964ELj8EE6ToggleEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_2
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF492 0x7280      EORS     R2,R2,#0x100
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Toggle_2:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 5U>::Toggle()
+   \                     _ZN3LedILj1073874964ELj5EE6ToggleEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Toggle_3
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF092 0x0220      EORS     R2,R2,#0x20
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Toggle_3:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'872'916U, 5U>::SwitchOff()
+   \                     _ZN3LedILj1073872916ELj5EE9SwitchOffEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??SwitchOff_0
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF032 0x0220      BICS     R2,R2,#0x20
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??SwitchOff_0:
+   \        0xC   0x4002'0014        DC32     0x40020014
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 9U>::SwitchOff()
+   \                     _ZN3LedILj1073874964ELj9EE9SwitchOffEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??SwitchOff_1
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF432 0x7200      BICS     R2,R2,#0x200
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??SwitchOff_1:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 8U>::SwitchOff()
+   \                     _ZN3LedILj1073874964ELj8EE9SwitchOffEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??SwitchOff_2
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF432 0x7280      BICS     R2,R2,#0x100
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??SwitchOff_2:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void Led<1'073'874'964U, 5U>::SwitchOff()
+   \                     _ZN3LedILj1073874964ELj5EE9SwitchOffEv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??SwitchOff_3
+   \        0x2   0x680A             LDR      R2,[R1, #+0]
+   \        0x4   0xF032 0x0220      BICS     R2,R2,#0x20
+   \        0x8   0x600A             STR      R2,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??SwitchOff_3:
+   \        0xC   0x4002'0814        DC32     0x40020814
+
+   \                                 In section .text, align 4
+   \   __vfp void ModeManager<modes>::Init()
+   \                     _ZN11ModeManagerIL_Z5modesEE4InitEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6861             LDR      R1,[R4, #+4]
+   \        0x6   0x4804             LDR.N    R0,??Init_0
+   \        0x8   0x.... 0x....      BL       _ZNSt5arrayIP5IModeLj2EEixEj
+   \        0xC   0x6800             LDR      R0,[R0, #+0]
+   \        0xE   0x6801             LDR      R1,[R0, #+0]
+   \       0x10   0x6849             LDR      R1,[R1, #+4]
+   \       0x12   0x4788             BLX      R1
+   \       0x14   0xBD10             POP      {R4,PC}
+   \       0x16   0xBF00             Nop
+   \                     ??Init_0:
+   \       0x18   0x....'....        DC32     modes
+
+   \                                 In section .text, align 4
+   \   __vfp void ModeManager<modes>::SetNextMode()
+   \                     _ZN11ModeManagerIL_Z5modesEE11SetNextModeEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6865             LDR      R5,[R4, #+4]
+   \        0x6   0x1C6D             ADDS     R5,R5,#+1
+   \        0x8   0x2D02             CMP      R5,#+2
+   \        0xA   0xD301             BCC.N    ??SetNextMode_1
+   \        0xC   0x2000             MOVS     R0,#+0
+   \        0xE   0xE000             B.N      ??SetNextMode_2
+   \                     ??SetNextMode_1: (+1)
+   \       0x10   0x0028             MOVS     R0,R5
+   \                     ??SetNextMode_2: (+1)
+   \       0x12   0x6060             STR      R0,[R4, #+4]
+   \       0x14   0x6861             LDR      R1,[R4, #+4]
+   \       0x16   0x4804             LDR.N    R0,??SetNextMode_0
+   \       0x18   0x.... 0x....      BL       _ZNSt5arrayIP5IModeLj2EEixEj
+   \       0x1C   0x6800             LDR      R0,[R0, #+0]
+   \       0x1E   0x6801             LDR      R1,[R0, #+0]
+   \       0x20   0x6849             LDR      R1,[R1, #+4]
+   \       0x22   0x4788             BLX      R1
+   \       0x24   0xBD31             POP      {R0,R4,R5,PC}
+   \       0x26   0xBF00             Nop
+   \                     ??SetNextMode_0:
+   \       0x28   0x....'....        DC32     modes
+
+   \                                 In section .text, align 4
+   \   __vfp void ModeManager<modes>::Update()
+   \                     _ZN11ModeManagerIL_Z5modesEE6UpdateEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6861             LDR      R1,[R4, #+4]
+   \        0x6   0x4804             LDR.N    R0,??Update_0
+   \        0x8   0x.... 0x....      BL       _ZNSt5arrayIP5IModeLj2EEixEj
+   \        0xC   0x6800             LDR      R0,[R0, #+0]
+   \        0xE   0x6801             LDR      R1,[R0, #+0]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x4788             BLX      R1
+   \       0x14   0xBD10             POP      {R4,PC}
+   \       0x16   0xBF00             Nop
+   \                     ??Update_0:
+   \       0x18   0x....'....        DC32     modes
+
+   \                                 In section .text, align 4
+   \   __vfp void TreeMode<leds>::Init()
+   \                     _ZN8TreeModeIL_Z4ledsEE4InitEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x2000             MOVS     R0,#+0
+   \        0x6   0x6060             STR      R0,[R4, #+4]
+   \        0x8   0x2500             MOVS     R5,#+0
+   \                     ??Init_3: (+1)
+   \        0xA   0x2D04             CMP      R5,#+4
+   \        0xC   0xD209             BCS.N    ??Init_4
+   \        0xE   0x0029             MOVS     R1,R5
+   \       0x10   0x4804             LDR.N    R0,??Init_1
+   \       0x12   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EEixEj
+   \       0x16   0x6800             LDR      R0,[R0, #+0]
+   \       0x18   0x6801             LDR      R1,[R0, #+0]
+   \       0x1A   0x6849             LDR      R1,[R1, #+4]
+   \       0x1C   0x4788             BLX      R1
+   \       0x1E   0x1C6D             ADDS     R5,R5,#+1
+   \       0x20   0xE7F3             B.N      ??Init_3
+   \                     ??Init_4: (+1)
+   \       0x22   0xBD31             POP      {R0,R4,R5,PC}
+   \                     ??Init_1:
+   \       0x24   0x....'....        DC32     leds
+
+   \                                 In section .text, align 4
+   \   __vfp void TreeMode<leds>::Execute()
+   \                     _ZN8TreeModeIL_Z4ledsEE7ExecuteEv: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x6861             LDR      R1,[R4, #+4]
+   \        0x6   0x4808             LDR.N    R0,??Execute_0
+   \        0x8   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EEixEj
+   \        0xC   0x6800             LDR      R0,[R0, #+0]
+   \        0xE   0x6801             LDR      R1,[R0, #+0]
+   \       0x10   0x6809             LDR      R1,[R1, #+0]
+   \       0x12   0x4788             BLX      R1
+   \       0x14   0x6860             LDR      R0,[R4, #+4]
+   \       0x16   0x1C40             ADDS     R0,R0,#+1
+   \       0x18   0x6060             STR      R0,[R4, #+4]
+   \       0x1A   0x6860             LDR      R0,[R4, #+4]
+   \       0x1C   0x2804             CMP      R0,#+4
+   \       0x1E   0xD301             BCC.N    ??Execute_2
+   \       0x20   0x2000             MOVS     R0,#+0
+   \       0x22   0x6060             STR      R0,[R4, #+4]
+   \                     ??Execute_2: (+1)
+   \       0x24   0xBD10             POP      {R4,PC}
+   \       0x26   0xBF00             Nop
+   \                     ??Execute_0:
+   \       0x28   0x....'....        DC32     leds
+
+   \                                 In section .text, align 4
+   \   __vfp void ChessMode<leds>::Init()
+   \                     _ZN9ChessModeIL_Z4ledsEE4InitEv: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x2500             MOVS     R5,#+0
+   \                     ??Init_5: (+1)
+   \        0x6   0x2D04             CMP      R5,#+4
+   \        0x8   0xD209             BCS.N    ??Init_6
+   \        0xA   0x0029             MOVS     R1,R5
+   \        0xC   0x480C             LDR.N    R0,??Init_2
+   \        0xE   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EEixEj
+   \       0x12   0x6800             LDR      R0,[R0, #+0]
+   \       0x14   0x6801             LDR      R1,[R0, #+0]
+   \       0x16   0x6849             LDR      R1,[R1, #+4]
+   \       0x18   0x4788             BLX      R1
+   \       0x1A   0x1C6D             ADDS     R5,R5,#+1
+   \       0x1C   0xE7F3             B.N      ??Init_5
+   \                     ??Init_6: (+1)
+   \       0x1E   0x2500             MOVS     R5,#+0
+   \                     ??Init_7: (+1)
+   \       0x20   0x2D04             CMP      R5,#+4
+   \       0x22   0xD20C             BCS.N    ??Init_8
+   \       0x24   0x0028             MOVS     R0,R5
+   \       0x26   0x07C0             LSLS     R0,R0,#+31
+   \       0x28   0xD407             BMI.N    ??Init_9
+   \       0x2A   0x0029             MOVS     R1,R5
+   \       0x2C   0x4804             LDR.N    R0,??Init_2
+   \       0x2E   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EEixEj
+   \       0x32   0x6800             LDR      R0,[R0, #+0]
+   \       0x34   0x6801             LDR      R1,[R0, #+0]
+   \       0x36   0x6809             LDR      R1,[R1, #+0]
+   \       0x38   0x4788             BLX      R1
+   \                     ??Init_9: (+1)
+   \       0x3A   0x1C6D             ADDS     R5,R5,#+1
+   \       0x3C   0xE7F0             B.N      ??Init_7
+   \                     ??Init_8: (+1)
+   \       0x3E   0xBD31             POP      {R0,R4,R5,PC}
+   \                     ??Init_2:
+   \       0x40   0x....'....        DC32     leds
+
+   \                                 In section .text, align 4
+   \   __vfp void ChessMode<leds>::Execute()
+   \                     _ZN9ChessModeIL_Z4ledsEE7ExecuteEv: (+1)
+   \        0x0   0xB53E             PUSH     {R1-R5,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x4D0E             LDR.N    R5,??Execute_1
+   \        0x6   0x0028             MOVS     R0,R5
+   \        0x8   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EE5beginEv
+   \        0xC   0x9000             STR      R0,[SP, #+0]
+   \        0xE   0x0028             MOVS     R0,R5
+   \       0x10   0x.... 0x....      BL       _ZNSt5arrayIP14ILedToggleableLj4EE3endEv
+   \       0x14   0x9001             STR      R0,[SP, #+4]
+   \                     ??Execute_3: (+1)
+   \       0x16   0xA901             ADD      R1,SP,#+4
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x.... 0x....      BL       _ZNKSt21_Array_const_iteratorIP14ILedToggleableLj4EEneERKS2_
+   \       0x1E   0x2800             CMP      R0,#+0
+   \       0x20   0xD00C             BEQ.N    ??Execute_4
+   \       0x22   0x4668             MOV      R0,SP
+   \       0x24   0x.... 0x....      BL       _ZNKSt15_Array_iteratorIP14ILedToggleableLj4EEdeEv
+   \       0x28   0x6800             LDR      R0,[R0, #+0]
+   \       0x2A   0x0005             MOVS     R5,R0
+   \       0x2C   0x0028             MOVS     R0,R5
+   \       0x2E   0x6829             LDR      R1,[R5, #+0]
+   \       0x30   0x6809             LDR      R1,[R1, #+0]
+   \       0x32   0x4788             BLX      R1
+   \       0x34   0x4668             MOV      R0,SP
+   \       0x36   0x.... 0x....      BL       _ZNSt15_Array_iteratorIP14ILedToggleableLj4EEppEv
+   \       0x3A   0xE7EC             B.N      ??Execute_3
+   \                     ??Execute_4: (+1)
+   \       0x3C   0xBD37             POP      {R0-R2,R4,R5,PC}
+   \       0x3E   0xBF00             Nop
+   \                     ??Execute_1:
+   \       0x40   0x....'....        DC32     leds
+
+   \                                 In section .text, align 4
+   \   __vfp ButtonTask::ButtonTask(IButton &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+   \                     _ZN10ButtonTaskC1ER7IButtonNSt6chrono8durationIxSt5ratioILx1ELx1000EEEERN9OsWrapper7MailBoxIbLj1EEE: (+1)
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \        0x4   0x0006             MOVS     R6,R0
+   \        0x6   0x000F             MOVS     R7,R1
+   \        0x8   0x0014             MOVS     R4,R2
+   \        0xA   0x001D             MOVS     R5,R3
+   \        0xC   0xF8DD 0x8018      LDR      R8,[SP, #+24]
+   \       0x10   0x0030             MOVS     R0,R6
+   \       0x12   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
+   \       0x16   0x4806             LDR.N    R0,??ButtonTask_0
+   \       0x18   0x6030             STR      R0,[R6, #+0]
+   \       0x1A   0xF516 0x608C      ADDS     R0,R6,#+1120
+   \       0x1E   0xE9C0 0x4500      STRD     R4,R5,[R0, #+0]
+   \       0x22   0xF8C6 0x7468      STR      R7,[R6, #+1128]
+   \       0x26   0xF8C6 0x846C      STR      R8,[R6, #+1132]
+   \       0x2A   0x0030             MOVS     R0,R6
+   \       0x2C   0xE8BD 0x81F0      POP      {R4-R8,PC}
+   \                     ??ButtonTask_0:
+   \       0x30   0x....'....        DC32     _ZTV10ButtonTask+0x8
+
+   \                                 In section .text, align 4
+   \   __vfp LedManagerTask::LedManagerTask(IModeManager &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+   \                     _ZN14LedManagerTaskC1ER12IModeManagerNSt6chrono8durationIxSt5ratioILx1ELx1000EEEERN9OsWrapper7MailBoxIbLj1EEE: (+1)
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \        0x4   0x0006             MOVS     R6,R0
+   \        0x6   0x000F             MOVS     R7,R1
+   \        0x8   0x0014             MOVS     R4,R2
+   \        0xA   0x001D             MOVS     R5,R3
+   \        0xC   0xF8DD 0x8018      LDR      R8,[SP, #+24]
+   \       0x10   0x0030             MOVS     R0,R6
+   \       0x12   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
+   \       0x16   0x4806             LDR.N    R0,??LedManagerTask_0
+   \       0x18   0x6030             STR      R0,[R6, #+0]
+   \       0x1A   0xF516 0x608C      ADDS     R0,R6,#+1120
+   \       0x1E   0xE9C0 0x4500      STRD     R4,R5,[R0, #+0]
+   \       0x22   0xF8C6 0x7468      STR      R7,[R6, #+1128]
+   \       0x26   0xF8C6 0x846C      STR      R8,[R6, #+1132]
+   \       0x2A   0x0030             MOVS     R0,R6
+   \       0x2C   0xE8BD 0x81F0      POP      {R4-R8,PC}
+   \                     ??LedManagerTask_0:
+   \       0x30   0x....'....        DC32     _ZTV14LedManagerTask+0x8
+
+   \                                 In section .text, align 2
+   \   __vfp IFilter::subobject IFilter() noexcept
+   \                     _ZN7IFilterC2Ev: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x0004             MOVS     R4,R0
+   \        0x4   0x0020             MOVS     R0,R4
+   \        0x6   0x.... 0x....      BL       _ZN7IFilterC1Ev
+   \        0xA   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2
+   \   __vfp IFilter::IFilter() noexcept
+   \                     _ZN7IFilterC1Ev: (+1)
+   \        0x0   0x4770             BX       LR
+
+   \                                 In section .text, align 4
+   \   __vfp MeasureTask::MeasureTask(std::chrono::milliseconds, IFilter &)
+   \                     _ZN11MeasureTaskC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEER7IFilter: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x0006             MOVS     R6,R0
+   \        0x4   0x0014             MOVS     R4,R2
+   \        0x6   0x001D             MOVS     R5,R3
+   \        0x8   0x9F06             LDR      R7,[SP, #+24]
+   \        0xA   0x0030             MOVS     R0,R6
+   \        0xC   0x.... 0x....      BL       _ZN9OsWrapper6ThreadILj256EEC2Ev
+   \       0x10   0x4804             LDR.N    R0,??MeasureTask_0
+   \       0x12   0x6030             STR      R0,[R6, #+0]
+   \       0x14   0xF8C6 0x745C      STR      R7,[R6, #+1116]
+   \       0x18   0xF516 0x608C      ADDS     R0,R6,#+1120
+   \       0x1C   0xE9C0 0x4500      STRD     R4,R5,[R0, #+0]
+   \       0x20   0x0030             MOVS     R0,R6
+   \       0x22   0xBDF2             POP      {R1,R4-R7,PC}
+   \                     ??MeasureTask_0:
+   \       0x24   0x....'....        DC32     _ZTV11MeasureTask+0x8
+
+   \                                 In section .text, align 4
+   \   __vfp RCFilter::RCFilter(float, tRc)
+   \                     _ZN8RCFilterC1Eff: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xED2D 0x8B02      VPUSH    {D8}
+   \        0x6   0x0004             MOVS     R4,R0
+   \        0x8   0xEEB0 0x8A40      VMOV.F32 S16,S0
+   \        0xC   0xEEF0 0x8A60      VMOV.F32 S17,S1
+   \       0x10   0x0020             MOVS     R0,R4
+   \       0x12   0x.... 0x....      BL       _ZN7IFilterC2Ev
+   \       0x16   0x480A             LDR.N    R0,??RCFilter_0
+   \       0x18   0x6020             STR      R0,[R4, #+0]
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0x6060             STR      R0,[R4, #+4]
+   \       0x1E   0xED84 0x8A02      VSTR     S16,[R4, #+8]
+   \       0x22   0xEDC4 0x8A03      VSTR     S17,[R4, #+12]
+   \       0x26   0xEEF0 0x0A48      VMOV.F32 S1,S16
+   \       0x2A   0xEEB0 0x0A68      VMOV.F32 S0,S17
+   \       0x2E   0x0020             MOVS     R0,R4
+   \       0x30   0x.... 0x....      BL       _ZN8RCFilter13CalculateThauEff
+   \       0x34   0xED84 0x0A04      VSTR     S0,[R4, #+16]
+   \       0x38   0x0020             MOVS     R0,R4
+   \       0x3A   0xECBD 0x8B02      VPOP     {D8}
+   \       0x3E   0xBD10             POP      {R4,PC}
+   \                     ??RCFilter_0:
+   \       0x40   0x....'....        DC32     _ZTV8RCFilter+0x8
+
+   \                                 In section .rodata, align 8
+   \   static __absolute std::chrono::duration<__int64_t, std::milli> const sampleTime
+   \                     sampleTime:
+   \        0x0   0x0000'0000'0      DC64 100
+
+   \              000'0064
+
+   \                                 In section .rodata, align 8
+   \   static __absolute std::chrono::duration<__int64_t, std::milli> const rc
+   \                     rc:
+   \        0x0   0x0000'0000'0      DC64 1'000
+
+   \              000'03E8
+
+   \                                 In section .data, align 4
+   \   __absolute Button<1'073'874'960U, 13U, true> button
+   \                     button:
+   \        0x0   0x....'....        DC32 _ZTV6ButtonILj1073874960ELj13ELb1EE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute Led<1'073'872'916U, 5U> led1
+   \                     led1:
+   \        0x0   0x....'....        DC32 _ZTV3LedILj1073872916ELj5EE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute Led<1'073'874'964U, 9U> led2
+   \                     led2:
+   \        0x0   0x....'....        DC32 _ZTV3LedILj1073874964ELj9EE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute Led<1'073'874'964U, 8U> led3
+   \                     led3:
+   \        0x0   0x....'....        DC32 _ZTV3LedILj1073874964ELj8EE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute Led<1'073'874'964U, 5U> led4
+   \                     led4:
+   \        0x0   0x....'....        DC32 _ZTV3LedILj1073874964ELj5EE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute tLeds leds
+   \                     leds:
+   \        0x0   0x....'....        DC32 led1, led2, led3, led4
+
+   \              0x....'....  
+
+   \              0x....'....  
+
+   \              0x....'....
+
+   \                                 In section .data, align 4
+   \   __absolute ChessMode<leds> chessMode
+   \                     chessMode:
+   \        0x0   0x....'....        DC32 _ZTV9ChessModeIL_Z4ledsEE + 0x8
+
+   \                                 In section .data, align 4
+   \   __absolute TreeMode<leds> treeMode
+   \                     treeMode:
+   \        0x0   0x....'....        DC32 _ZTV8TreeModeIL_Z4ledsEE + 0x8, 0
+
+   \              0x0000'0000
+
+   \                                 In section .data, align 4
+   \   __absolute std::array<IMode *, 2U> modes
+   \                     modes:
+   \        0x0   0x....'....        DC32 treeMode, chessMode
+
+   \              0x....'....
+
+   \                                 In section .data, align 4
+   \   __absolute ModeManager<modes> modeManager
+   \                     modeManager:
+   \        0x0   0x....'....        DC32 _ZTV11ModeManagerIL_Z5modesEE + 0x8, 0
+
+   \              0x0000'0000
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __intrinsic __vfp void __sti__routine()
+   \                     __sti__routine: (+1)
+   \        0x0   0xE92D 0x47F0      PUSH     {R4-R10,LR}
+   \        0x4   0xED2D 0x8B02      VPUSH    {D8}
+   \        0x8   0xB082             SUB      SP,SP,#+8
+   \        0xA   0x.... 0x....      LDR.W    R8,??DataTable1
+   \        0xE   0x4640             MOV      R0,R8
+   \       0x10   0x.... 0x....      BL       _ZN9OsWrapper7MailBoxIbLj1EEC1Ev
+   \       0x14   0x....             LDR.N    R2,??DataTable1_1
+   \       0x16   0x....             LDR.N    R1,??DataTable1_2
+   \       0x18   0x.... 0x....      BL       __aeabi_atexit
+   \       0x1C   0x....             LDR.N    R0,??DataTable1_3
+   \       0x1E   0x.... 0x....      BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \       0x22   0x0004             MOVS     R4,R0
+   \       0x24   0x000D             MOVS     R5,R1
+   \       0x26   0x.... 0x....      LDR.W    R10,??DataTable1_4
+   \       0x2A   0x4650             MOV      R0,R10
+   \       0x2C   0x.... 0x....      BL       _ZNKSt6chrono8durationIxSt5ratioILx1ELx1000EEE5countEv
+   \       0x30   0x0006             MOVS     R6,R0
+   \       0x32   0x000F             MOVS     R7,R1
+   \       0x34   0x.... 0x....      LDR.W    R9,??DataTable1_5
+   \       0x38   0x0020             MOVS     R0,R4
+   \       0x3A   0x0029             MOVS     R1,R5
+   \       0x3C   0x.... 0x....      BL       __aeabi_l2f
+   \       0x40   0xEE00 0x0A90      VMOV     S1,R0
+   \       0x44   0xEEB0 0x8A60      VMOV.F32 S16,S1
+   \       0x48   0x0030             MOVS     R0,R6
+   \       0x4A   0x0039             MOVS     R1,R7
+   \       0x4C   0x.... 0x....      BL       __aeabi_l2f
+   \       0x50   0xEE00 0x0A10      VMOV     S0,R0
+   \       0x54   0xEEF0 0x0A48      VMOV.F32 S1,S16
+   \       0x58   0x4648             MOV      R0,R9
+   \       0x5A   0x.... 0x....      BL       _ZN8RCFilterC1Eff
+   \       0x5E   0xF8CD 0x8000      STR      R8,[SP, #+0]
+   \       0x62   0x....             LDR.N    R0,??DataTable1_6
+   \       0x64   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x68   0x....             LDR.N    R1,??DataTable1_7
+   \       0x6A   0x....             LDR.N    R0,??DataTable1_8
+   \       0x6C   0x.... 0x....      BL       _ZN14LedManagerTaskC1ER12IModeManagerNSt6chrono8durationIxSt5ratioILx1ELx1000EEEERN9OsWrapper7MailBoxIbLj1EEE
+   \       0x70   0xF8CD 0x8000      STR      R8,[SP, #+0]
+   \       0x74   0x....             LDR.N    R0,??DataTable1_9
+   \       0x76   0xE9D0 0x2300      LDRD     R2,R3,[R0, #+0]
+   \       0x7A   0x....             LDR.N    R1,??DataTable1_10
+   \       0x7C   0x....             LDR.N    R0,??DataTable1_11
+   \       0x7E   0x.... 0x....      BL       _ZN10ButtonTaskC1ER7IButtonNSt6chrono8durationIxSt5ratioILx1ELx1000EEEERN9OsWrapper7MailBoxIbLj1EEE
+   \       0x82   0xF8CD 0x9000      STR      R9,[SP, #+0]
+   \       0x86   0xE9DA 0x2300      LDRD     R2,R3,[R10, #+0]
+   \       0x8A   0x....             LDR.N    R0,??DataTable1_12
+   \       0x8C   0x.... 0x....      BL       _ZN11MeasureTaskC1ENSt6chrono8durationIxSt5ratioILx1ELx1000EEEER7IFilter
+   \       0x90   0xB002             ADD      SP,SP,#+8
+   \       0x92   0xECBD 0x8B02      VPOP     {D8}
+   \       0x96   0xE8BD 0x87F0      POP      {R4-R10,PC}
+
+   \                                 In section .bss, align 4
+   \   __absolute OsWrapper::MailBox<bool, 1U> mailBox
+   \                     mailBox:
+   \        0x0                      DS8 80
+
+   \                                 In section .bss, align 4
+   \   __absolute RCFilter rcFilter
+   \                     rcFilter:
+   \        0x0                      DS8 20
+
+   \                                 In section .bss, align 8
+   \   __absolute LedManagerTask ledManagerTask
+   \                     ledManagerTask:
+   \        0x0                      DS8 1'136
+
+   \                                 In section .bss, align 8
+   \   __absolute ButtonTask buttonTask
+   \                     buttonTask:
+   \        0x0                      DS8 1'136
+
+   \                                 In section .bss, align 8
+   \   __absolute MeasureTask measureTask
+   \                     measureTask:
+   \        0x0                      DS8 1'128
+      6          #include "mutex.hpp"        // for mutex
+      7          
+      8          #include "rccregisters.hpp"   // for RCC
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_0
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0x0040             LSLS     R0,R0,#+1
+   \        0x8   0xF050 0x0001      ORRS     R0,R0,#0x1
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_0:
+   \       0x10   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_1
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0880             LSRS     R0,R0,#+2
+   \        0x6   0x0080             LSLS     R0,R0,#+2
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Set_1:
+   \        0xC   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC_Common_CCR_TSVREFE_Values<ADC_Common::CCR, 23U, 1U, ReadWriteMode, ADC_Common::ADC_CommonCCRBase>, ADC_Common::ADC_CommonCCRBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI29ADC_Common_CCR_TSVREFE_ValuesIN10ADC_Common3CCRELj23ELj1E13ReadWriteModeNS1_17ADC_CommonCCRBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_2
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x0000      BICS     R0,R0,#0x800000
+   \        0x8   0xF450 0x0000      ORRS     R0,R0,#0x800000
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_2:
+   \       0x10   0x4001'2304        DC32     0x40012304
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_CR1_RES_Values<ADC1::CR1, 24U, 2U, ReadWriteMode, ADC1::ADC1CR1Base>, ADC1::ADC1CR1Base, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI19ADC1_CR1_RES_ValuesIN4ADC13CR1ELj24ELj2E13ReadWriteModeNS1_11ADC1CR1BaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_3
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x7040      BICS     R0,R0,#0x3000000
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Set_3:
+   \        0xC   0x4001'2004        DC32     0x40012004
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_SQR1_L_Values<ADC1::SQR1, 20U, 4U, ReadWriteMode, ADC1::ADC1SQR1Base>, ADC1::ADC1SQR1Base, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI18ADC1_SQR1_L_ValuesIN4ADC14SQR1ELj20ELj4E13ReadWriteModeNS1_12ADC1SQR1BaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_4
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x0070      BICS     R0,R0,#0xF00000
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Set_4:
+   \        0xC   0x4001'202C        DC32     0x4001202c
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_SQR3_SQ1_Values<ADC1::SQR3, 0U, 5U, ReadWriteMode, ADC1::ADC1SQR3Base>, ADC1::ADC1SQR3Base, 18U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI20ADC1_SQR3_SQ1_ValuesIN4ADC14SQR3ELj0ELj5E13ReadWriteModeNS1_12ADC1SQR3BaseEES4_Lj18EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_5
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0x0940             LSRS     R0,R0,#+5
+   \        0x6   0x0140             LSLS     R0,R0,#+5
+   \        0x8   0xF050 0x0012      ORRS     R0,R0,#0x12
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_5:
+   \       0x10   0x4001'2034        DC32     0x40012034
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_SMPR1_SMPx_x_Values<ADC1::SMPR1, 24U, 3U, ReadWriteMode, ADC1::ADC1SMPR1Base>, ADC1::ADC1SMPR1Base, 4U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI24ADC1_SMPR1_SMPx_x_ValuesIN4ADC15SMPR1ELj24ELj3E13ReadWriteModeNS1_13ADC1SMPR1BaseEES4_Lj4EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_6
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x60E0      BICS     R0,R0,#0x7000000
+   \        0x8   0xF050 0x6080      ORRS     R0,R0,#0x4000000
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_6:
+   \       0x10   0x4001'200C        DC32     0x4001200c
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_CR2_CONT_Values<ADC1::CR2, 1U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 0U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI20ADC1_CR2_CONT_ValuesIN4ADC13CR2ELj1ELj1E13ReadWriteModeNS1_11ADC1CR2BaseEES4_Lj0EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4902             LDR.N    R1,??Set_7
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0002      BICS     R0,R0,#0x2
+   \        0x8   0x6008             STR      R0,[R1, #+0]
+   \        0xA   0x4770             BX       LR
+   \                     ??Set_7:
+   \        0xC   0x4001'2008        DC32     0x40012008
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<ADC1_CR2_EOCS_Values<ADC1::CR2, 10U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI20ADC1_CR2_EOCS_ValuesIN4ADC13CR2ELj10ELj1E13ReadWriteModeNS1_11ADC1CR2BaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_8
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x6080      BICS     R0,R0,#0x400
+   \        0x8   0xF450 0x6080      ORRS     R0,R0,#0x400
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_8:
+   \       0x10   0x4001'2008        DC32     0x40012008
+
+   \                                 In section .text, align 4
+   \   __vfp void FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+   \                     _ZN14FieldValueBaseI26GPIOA_MODER_MODER15_ValuesIN5GPIOA5MODERELj10ELj2E13ReadWriteModeNS1_14GPIOAMODERBaseEES4_Lj1EE3SetIS3_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_9
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x6040      BICS     R0,R0,#0xC00
+   \        0x8   0xF450 0x6080      ORRS     R0,R0,#0x400
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_9:
+   \       0x10   0x4002'0000        DC32     0x40020000
+
+   \                                 In section .text, align 4
+   \   __vfp bool FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+   \                     _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj0EE5IsSetIS3_vEEbv: (+1)
+   \        0x0   0x4804             LDR.N    R0,??IsSet_0
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0x0840             LSRS     R0,R0,#+1
+   \        0x6   0xF010 0x0001      ANDS     R0,R0,#0x1
+   \        0xA   0xF090 0x0001      EORS     R0,R0,#0x1
+   \        0xE   0xB2C0             UXTB     R0,R0
+   \       0x10   0x4770             BX       LR
+   \       0x12   0xBF00             Nop
+   \                     ??IsSet_0:
+   \       0x14   0x4002'3800        DC32     0x40023800
+
+   \                                 In section .text, align 4
+   \   __vfp bool FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+   \                     _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv: (+1)
+   \        0x0   0x4804             LDR.N    R0,??IsSet_1
+   \        0x2   0x6800             LDR      R0,[R0, #+0]
+   \        0x4   0xF010 0x0F0C      TST      R0,#0xC
+   \        0x8   0xD101             BNE.N    ??IsSet_2
+   \        0xA   0x2001             MOVS     R0,#+1
+   \        0xC   0xE000             B.N      ??IsSet_3
+   \                     ??IsSet_2: (+1)
+   \        0xE   0x2000             MOVS     R0,#+0
+   \                     ??IsSet_3: (+1)
+   \       0x10   0xB2C0             UXTB     R0,R0
+   \       0x12   0x4770             BX       LR
+   \                     ??IsSet_1:
+   \       0x14   0x4002'3808        DC32     0x40023808
+
+   \                                 In section .text, align 4
+   \   __vfp void Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvES3_I26RCC_AHB1ENR_GPIOAEN_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_10
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF030 0x0005      BICS     R0,R0,#0x5
+   \        0x8   0xF050 0x0005      ORRS     R0,R0,#0x5
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_10:
+   \       0x10   0x4002'3830        DC32     0x40023830
+
+   \                                 In section .text, align 4
+   \   __vfp void Register<1'073'887'300U, 32U, ReadWriteMode, RCC::RCCAPB2ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 8U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073887300ELj32E13ReadWriteModeN3RCC14RCCAPB2ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB2ENRELj8ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj14ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4903             LDR.N    R1,??Set_11
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+   \        0x4   0xF430 0x4082      BICS     R0,R0,#0x4100
+   \        0x8   0xF450 0x4082      ORRS     R0,R0,#0x4100
+   \        0xC   0x6008             STR      R0,[R1, #+0]
+   \        0xE   0x4770             BX       LR
+   \                     ??Set_11:
+   \       0x10   0x4002'3844        DC32     0x40023844
+
+   \                                 In section .text, align 4
+   \   __vfp void Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+   \                     _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv: (+1)
+   \        0x0   0x4A04             LDR.N    R2,??Set_12
+   \        0x2   0x6811             LDR      R1,[R2, #+0]
+   \        0x4   0x4804             LDR.N    R0,??Set_12+0x4
+   \        0x6   0x4001             ANDS     R1,R0,R1
+   \        0x8   0xF441 0x2180      ORR      R1,R1,#0x40000
+   \        0xC   0xF451 0x3182      ORRS     R1,R1,#0x10400
+   \       0x10   0x6011             STR      R1,[R2, #+0]
+   \       0x12   0x4770             BX       LR
+   \                     ??Set_12:
+   \       0x14   0x4002'0800        DC32     0x40020800
+   \       0x18   0xFFF0'F3FF        DC32     0xfff0f3ff
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvES3_I26RCC_AHB1ENR_GPIOAEN_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x0000'0005        DC32 5
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073887300ELj32E13ReadWriteModeN3RCC14RCCAPB2ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB2ENRELj8ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj14ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x0000'4100        DC32 16'640
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const mask
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE4mask:
+   \        0x0   0x000F'0C00        DC32 986'112
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvES3_I26RCC_AHB1ENR_GPIOAEN_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0000'0005        DC32 5
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073887300ELj32E13ReadWriteModeN3RCC14RCCAPB2ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB2ENRELj8ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj14ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0000'4100        DC32 16'640
+
+   \                                 In section .rodata, align 4
+   \   __absolute unsigned int const value
+   \                     _ZZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvvE5value:
+   \        0x0   0x0005'0400        DC32 328'704
+      9          
+     10          #include "Application/Diagnostic/GlobalStatus.hpp"
+     11          #include "gpioaregisters.hpp"  // for GPIOA
+     12          #include "gpiocregisters.hpp"  // for GPIOC
+     13          #include "adccommonregisters.hpp" // for ADC_Common
+     14          #include "adc1registers.hpp"    // for ADC
+     15          
+     16          
+
+   \                                 In section .data, align 4
+     17          std::uint32_t SystemCoreClock = 16'000'000U;
+   \                     SystemCoreClock:
+   \        0x0   0x00F4'2400        DC32 16'000'000
+     18          
+     19          
+     20          extern "C" {
+
+   \                                 In section .text, align 2, keep-with-next
+     21            int __low_level_init(void)
+     22            {
+   \                     __low_level_init: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     23              //Switch on external 16 MHz oscillator
+     24              RCC::CR::HSION::On::Set();
+   \        0x2   0x.... 0x....      BL       _ZN14FieldValueBaseI19RCC_CR_HSION_ValuesIN3RCC2CRELj0ELj1E13ReadWriteModeNS1_9RCCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+     25              while (RCC::CR::HSIRDY::NotReady::IsSet())
+   \                     ??__low_level_init_0: (+1)
+   \        0x6   0x.... 0x....      BL       _ZN14FieldValueBaseI20RCC_CR_HSIRDY_ValuesIN3RCC2CRELj1ELj1E8ReadModeNS1_9RCCCRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+   \        0xA   0x2800             CMP      R0,#+0
+   \        0xC   0xD1FB             BNE.N    ??__low_level_init_0
+     26              {
+     27          
+     28              }
+     29              
+     30              //Switch system clock on external oscillator
+     31              RCC::CFGR::SW::Hsi::Set();
+   \        0xE   0x.... 0x....      BL       _ZN14FieldValueBaseI18RCC_CFGR_SW_ValuesIN3RCC4CFGRELj0ELj2E13ReadWriteModeNS1_11RCCCFGRBaseEES4_Lj0EE3SetIS3_vEEvv
+     32              while (!RCC::CFGR::SWS::Hsi::IsSet())
+   \                     ??__low_level_init_1: (+1)
+   \       0x12   0x.... 0x....      BL       _ZN14FieldValueBaseI19RCC_CFGR_SWS_ValuesIN3RCC4CFGRELj2ELj2E8ReadModeNS1_11RCCCFGRBaseEES4_Lj0EE5IsSetIS3_vEEbv
+   \       0x16   0x2800             CMP      R0,#+0
+   \       0x18   0xD0FB             BEQ.N    ??__low_level_init_1
+     33              {
+     34          
+     35              }
+     36              
+     37              //Switch on clock on PortA and PortC
+     38              RCC::AHB1ENRPack<
+     39                  RCC::AHB1ENR::GPIOCEN::Enable,
+     40                  RCC::AHB1ENR::GPIOAEN::Enable
+     41              >::Set();
+   \       0x1A   0x.... 0x....      BL       _ZN8RegisterILj1073887280ELj32E13ReadWriteModeN3RCC14RCCAHB1ENRBaseEJ10FieldValueI26RCC_AHB1ENR_GPIOCEN_ValuesINS1_7AHB1ENRELj2ELj1ES0_S2_ES2_Lj1EvES3_I26RCC_AHB1ENR_GPIOAEN_ValuesIS5_Lj0ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     42              
+     43              //Switch on clock for ADC
+     44              RCC::APB2ENRPack<
+     45                  RCC::APB2ENR::ADC1EN::Enable,        
+     46                  RCC::APB2ENR::SYSCFGEN::Enable
+     47              >::Set();
+   \       0x1E   0x.... 0x....      BL       _ZN8RegisterILj1073887300ELj32E13ReadWriteModeN3RCC14RCCAPB2ENRBaseEJ10FieldValueI25RCC_AHB1ENR_DMA2EN_ValuesINS1_7APB2ENRELj8ELj1ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj14ELj1ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     48              
+     49              //Switch on temp reader
+     50              ADC_Common::CCR::TSVREFE::Enable::Set();
+   \       0x22   0x.... 0x....      BL       _ZN14FieldValueBaseI29ADC_Common_CCR_TSVREFE_ValuesIN10ADC_Common3CCRELj23ELj1E13ReadWriteModeNS1_17ADC_CommonCCRBaseEES4_Lj1EE3SetIS3_vEEvv
+     51              
+     52              //ADC Config
+     53              ADC1::CR1::RES::Bits12::Set();
+   \       0x26   0x.... 0x....      BL       _ZN14FieldValueBaseI19ADC1_CR1_RES_ValuesIN4ADC13CR1ELj24ELj2E13ReadWriteModeNS1_11ADC1CR1BaseEES4_Lj0EE3SetIS3_vEEvv
+     54              ADC1::SQR1::L::Conversions1::Set();
+   \       0x2A   0x.... 0x....      BL       _ZN14FieldValueBaseI18ADC1_SQR1_L_ValuesIN4ADC14SQR1ELj20ELj4E13ReadWriteModeNS1_12ADC1SQR1BaseEES4_Lj0EE3SetIS3_vEEvv
+     55              ADC1::SQR3::SQ1::Channel18::Set();
+   \       0x2E   0x.... 0x....      BL       _ZN14FieldValueBaseI20ADC1_SQR3_SQ1_ValuesIN4ADC14SQR3ELj0ELj5E13ReadWriteModeNS1_12ADC1SQR3BaseEES4_Lj18EE3SetIS3_vEEvv
+     56              ADC1::SMPR1::SMP18::Cycles84::Set();
+   \       0x32   0x.... 0x....      BL       _ZN14FieldValueBaseI24ADC1_SMPR1_SMPx_x_ValuesIN4ADC15SMPR1ELj24ELj3E13ReadWriteModeNS1_13ADC1SMPR1BaseEES4_Lj4EE3SetIS3_vEEvv
+     57              
+     58              ADC1::CR2::CONT::SingleConversion::Set();
+   \       0x36   0x.... 0x....      BL       _ZN14FieldValueBaseI20ADC1_CR2_CONT_ValuesIN4ADC13CR2ELj1ELj1E13ReadWriteModeNS1_11ADC1CR2BaseEES4_Lj0EE3SetIS3_vEEvv
+     59              ADC1::CR2::EOCS::SingleConversion::Set();
+   \       0x3A   0x.... 0x....      BL       _ZN14FieldValueBaseI20ADC1_CR2_EOCS_ValuesIN4ADC13CR2ELj10ELj1E13ReadWriteModeNS1_11ADC1CR2BaseEES4_Lj1EE3SetIS3_vEEvv
+     60              
+     61              //LED1 on PortA.5, set PortA.5 as output
+     62              GPIOA::MODER::MODER5::Output::Set();
+   \       0x3E   0x.... 0x....      BL       _ZN14FieldValueBaseI26GPIOA_MODER_MODER15_ValuesIN5GPIOA5MODERELj10ELj2E13ReadWriteModeNS1_14GPIOAMODERBaseEES4_Lj1EE3SetIS3_vEEvv
+     63          
+     64              /* LED2 on PortC.9, LED3 on PortC.8, LED4 on PortC.5 so set PortC.5,8,9 as output */
+     65              GPIOC::MODERPack<
+     66                  GPIOC::MODER::MODER5::Output,
+     67                  GPIOC::MODER::MODER8::Output,
+     68                  GPIOC::MODER::MODER9::Output
+     69              >::Set();
+   \       0x42   0x.... 0x....      BL       _ZN8RegisterILj1073874944ELj32E13ReadWriteModeN5GPIOC14GPIOCMODERBaseEJ10FieldValueI26GPIOC_MODER_MODER15_ValuesINS1_5MODERELj10ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj16ELj2ES0_S2_ES2_Lj1EvES3_IS4_IS5_Lj18ELj2ES0_S2_ES2_Lj1EvEEE3SetIS0_vEEvv
+     70              
+     71              return 1;
+   \       0x46   0x2001             MOVS     R0,#+1
+   \       0x48   0xBD02             POP      {R1,PC}
+     72            }
+     73          }
+     74          
+
+   \                                 In section .text, align 2, keep-with-next
+     75          int main()
+     76          {
+   \                     main: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     77            using namespace OsWrapper;
+     78            Rtos::CreateThread(ledManagerTask, "ledManagerTask");
+   \        0x2   0x221E             MOVS     R2,#+30
+   \        0x4   0x....             LDR.N    R1,??DataTable1_13
+   \        0x6   0x....             LDR.N    R0,??DataTable1_8
+   \        0x8   0x.... 0x....      BL       _ZN9OsWrapper4Rtos12CreateThreadI14LedManagerTaskEEvRT_PKcNS_14ThreadPriorityE
+     79            Rtos::CreateThread(buttonTask, "buttonTask", OsWrapper::ThreadPriority::aboveNormal);
+   \        0xC   0x2250             MOVS     R2,#+80
+   \        0xE   0x....             LDR.N    R1,??DataTable1_14
+   \       0x10   0x....             LDR.N    R0,??DataTable1_11
+   \       0x12   0x.... 0x....      BL       _ZN9OsWrapper4Rtos12CreateThreadI10ButtonTaskEEvRT_PKcNS_14ThreadPriorityE
+     80            Rtos::CreateThread(measureTask, "measureTask");
+   \       0x16   0x221E             MOVS     R2,#+30
+   \       0x18   0x....             LDR.N    R1,??DataTable1_15
+   \       0x1A   0x....             LDR.N    R0,??DataTable1_12
+   \       0x1C   0x.... 0x....      BL       _ZN9OsWrapper4Rtos12CreateThreadI11MeasureTaskEEvRT_PKcNS_14ThreadPriorityE
+     81            Rtos::Start();
+   \       0x20   0x.... 0x....      BL       _ZN9OsWrapper4Rtos5StartEv
+     82          
+     83            return 0;
+   \       0x24   0x2000             MOVS     R0,#+0
+   \       0x26   0xBD02             POP      {R1,PC}
+     84          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     mailBox
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     __dso_handle
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \        0x0   0x....'....        DC32     _ZN9OsWrapper7MailBoxIbLj1EED1Ev
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \        0x0   0x....'....        DC32     rc
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \        0x0   0x....'....        DC32     sampleTime
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \        0x0   0x....'....        DC32     rcFilter
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \        0x0   0x....'....        DC32     ?_4
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_7:
+   \        0x0   0x....'....        DC32     modeManager
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_8:
+   \        0x0   0x....'....        DC32     ledManagerTask
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_9:
+   \        0x0   0x....'....        DC32     ?_5
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_10:
+   \        0x0   0x....'....        DC32     button
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_11:
+   \        0x0   0x....'....        DC32     buttonTask
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_12:
+   \        0x0   0x....'....        DC32     measureTask
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_13:
+   \        0x0   0x....'....        DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_14:
+   \        0x0   0x....'....        DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_15:
+   \        0x0   0x....'....        DC32     ?_2
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \        0x0   0x6C 0x65          DC8 "ledManagerTask"
+
+   \              0x64 0x4D    
+
+   \              0x61 0x6E    
+
+   \              0x61 0x67    
+
+   \              0x65 0x72    
+
+   \              0x54 0x61    
+
+   \              0x73 0x6B    
+
+   \              0x00
+   \        0xF                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \        0x0   0x62 0x75          DC8 "buttonTask"
+
+   \              0x74 0x74    
+
+   \              0x6F 0x6E    
+
+   \              0x54 0x61    
+
+   \              0x73 0x6B    
+
+   \              0x00
+   \        0xB                      DS8 1
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \        0x0   0x6D 0x65          DC8 "measureTask"
+
+   \              0x61 0x73    
+
+   \              0x75 0x72    
+
+   \              0x65 0x54    
+
+   \              0x61 0x73    
+
+   \              0x6B 0x00
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   Button<1'073'874'960U, 13U, true>::IsPressed()
+      24   ButtonTask::ButtonTask(IButton &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+        24   -> OsWrapper::Thread<256U>::subobject Thread() noexcept
+      24   ChessMode<leds>::Execute()
+        24   -- Indirect call
+        24   -> std::_Array_const_iterator<ILedToggleable *, 4U>::operator!=(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+        24   -> std::_Array_iterator<ILedToggleable *, 4U>::operator*() const
+        24   -> std::_Array_iterator<ILedToggleable *, 4U>::operator++()
+        24   -> std::array<ILedToggleable *, 4U>::begin() noexcept
+        24   -> std::array<ILedToggleable *, 4U>::end() noexcept
+      16   ChessMode<leds>::Init()
+        16   -- Indirect call
+        16   -> std::array<ILedToggleable *, 4U>::operator[](size_t)
+       0   FieldValueBase<ADC1_CR1_RES_Values<ADC1::CR1, 24U, 2U, ReadWriteMode, ADC1::ADC1CR1Base>, ADC1::ADC1CR1Base, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC1_CR2_CONT_Values<ADC1::CR2, 1U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC1_CR2_EOCS_Values<ADC1::CR2, 10U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC1_SMPR1_SMPx_x_Values<ADC1::SMPR1, 24U, 3U, ReadWriteMode, ADC1::ADC1SMPR1Base>, ADC1::ADC1SMPR1Base, 4U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC1_SQR1_L_Values<ADC1::SQR1, 20U, 4U, ReadWriteMode, ADC1::ADC1SQR1Base>, ADC1::ADC1SQR1Base, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC1_SQR3_SQ1_Values<ADC1::SQR3, 0U, 5U, ReadWriteMode, ADC1::ADC1SQR3Base>, ADC1::ADC1SQR3Base, 18U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<ADC_Common_CCR_TSVREFE_Values<ADC_Common::CCR, 23U, 1U, ReadWriteMode, ADC_Common::ADC_CommonCCRBase>, ADC_Common::ADC_CommonCCRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+       0   FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+       0   FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+       0   IFilter::IFilter() noexcept
+       8   IFilter::subobject IFilter() noexcept
+         8   -> IFilter::IFilter() noexcept
+       0   Led<1'073'872'916U, 5U>::SwitchOff()
+       0   Led<1'073'872'916U, 5U>::Toggle()
+       0   Led<1'073'874'964U, 5U>::SwitchOff()
+       0   Led<1'073'874'964U, 5U>::Toggle()
+       0   Led<1'073'874'964U, 8U>::SwitchOff()
+       0   Led<1'073'874'964U, 8U>::Toggle()
+       0   Led<1'073'874'964U, 9U>::SwitchOff()
+       0   Led<1'073'874'964U, 9U>::Toggle()
+      24   LedManagerTask::LedManagerTask(IModeManager &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+        24   -> OsWrapper::Thread<256U>::subobject Thread() noexcept
+      24   MeasureTask::MeasureTask(std::chrono::milliseconds, IFilter &)
+        24   -> OsWrapper::Thread<256U>::subobject Thread() noexcept
+       8   ModeManager<modes>::Init()
+         8   -- Indirect call
+         8   -> std::array<IMode *, 2U>::operator[](size_t)
+      16   ModeManager<modes>::SetNextMode()
+        16   -- Indirect call
+        16   -> std::array<IMode *, 2U>::operator[](size_t)
+       8   ModeManager<modes>::Update()
+         8   -- Indirect call
+         8   -> std::array<IMode *, 2U>::operator[](size_t)
+       0   OsWrapper::IThread::IThread() noexcept
+       8   OsWrapper::IThread::Run()
+         8   -- Indirect call
+         8   -> OsWrapper::RtosWrapper::wGetTicks()
+       8   OsWrapper::IThread::subobject IThread() noexcept
+         8   -> OsWrapper::IThread::IThread() noexcept
+       8   OsWrapper::MailBox<bool, 1U>::MailBox()
+         8   -> OsWrapper::RtosWrapper::wMailBoxCreate(uint16_t, uint16_t, uint8_t *, StaticQueue_t &)
+         8   -> std::array<uint8_t, 1U>::data() noexcept
+       8   OsWrapper::MailBox<bool, 1U>::~MailBox() noexcept
+         8   -> OsWrapper::RtosWrapper::wMailBoxDelete(void * &)
+      24   OsWrapper::Rtos::CreateThread<ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 256U>::data() noexcept
+      24   OsWrapper::Rtos::CreateThread<LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 256U>::data() noexcept
+      24   OsWrapper::Rtos::CreateThread<MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority)
+        24   -> OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        24   -> std::array<uint32_t, 256U>::data() noexcept
+       8   OsWrapper::Rtos::Run(void *)
+         8   -> OsWrapper::IThread::Run()
+       8   OsWrapper::Rtos::Start()
+         8   -> OsWrapper::RtosWrapper::wStart()
+      40   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        40   -> xTaskCreateStatic
+      40   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        40   -> xTaskCreateStatic
+      40   OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+        40   -> xTaskCreateStatic
+       8   OsWrapper::RtosWrapper::wGetTicks()
+         8   -> xTaskGetTickCount
+      24   OsWrapper::RtosWrapper::wMailBoxCreate(uint16_t, uint16_t, uint8_t *, StaticQueue_t &)
+        24   -> xQueueGenericCreateStatic
+       8   OsWrapper::RtosWrapper::wMailBoxDelete(void * &)
+         8   -> vQueueDelete
+       8   OsWrapper::RtosWrapper::wStart()
+         8   -> vTaskStartScheduler
+       8   OsWrapper::Thread<256U>::Thread() noexcept
+         8   -> OsWrapper::IThread::subobject IThread() noexcept
+       8   OsWrapper::Thread<256U>::subobject Thread() noexcept
+         8   -> OsWrapper::Thread<256U>::Thread() noexcept
+      16   RCFilter::RCFilter(float, tRc)
+        16   -> IFilter::subobject IFilter() noexcept
+        16   -> RCFilter::CalculateThau(tRc, float)
+       0   Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+       0   Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       0   Register<1'073'887'300U, 32U, ReadWriteMode, RCC::RCCAPB2ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 8U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       8   TreeMode<leds>::Execute()
+         8   -- Indirect call
+         8   -> std::array<ILedToggleable *, 4U>::operator[](size_t)
+      16   TreeMode<leds>::Init()
+        16   -- Indirect call
+        16   -> std::array<ILedToggleable *, 4U>::operator[](size_t)
+       8   __low_level_init
+         8   -> FieldValueBase<ADC1_CR1_RES_Values<ADC1::CR1, 24U, 2U, ReadWriteMode, ADC1::ADC1CR1Base>, ADC1::ADC1CR1Base, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC1_CR2_CONT_Values<ADC1::CR2, 1U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC1_CR2_EOCS_Values<ADC1::CR2, 10U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC1_SMPR1_SMPx_x_Values<ADC1::SMPR1, 24U, 3U, ReadWriteMode, ADC1::ADC1SMPR1Base>, ADC1::ADC1SMPR1Base, 4U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC1_SQR1_L_Values<ADC1::SQR1, 20U, 4U, ReadWriteMode, ADC1::ADC1SQR1Base>, ADC1::ADC1SQR1Base, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC1_SQR3_SQ1_Values<ADC1::SQR3, 0U, 5U, ReadWriteMode, ADC1::ADC1SQR3Base>, ADC1::ADC1SQR3Base, 18U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<ADC_Common_CCR_TSVREFE_Values<ADC_Common::CCR, 23U, 1U, ReadWriteMode, ADC_Common::ADC_CommonCCRBase>, ADC_Common::ADC_CommonCCRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+         8   -> FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+         8   -> FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+         8   -> Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+         8   -> Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+         8   -> Register<1'073'887'300U, 32U, ReadWriteMode, RCC::RCCAPB2ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 8U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable>::Set<ReadWriteMode, void>()
+      48   __sti__routine()
+        48   -> ButtonTask::ButtonTask(IButton &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+        48   -> LedManagerTask::LedManagerTask(IModeManager &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+        48   -> MeasureTask::MeasureTask(std::chrono::milliseconds, IFilter &)
+        48   -> OsWrapper::MailBox<bool, 1U>::MailBox()
+        48   -> RCFilter::RCFilter(float, tRc)
+        48   -> __aeabi_atexit
+        48   -> __aeabi_l2f
+        48   -> std::chrono::duration<__int64_t, std::milli>::count() const
+       8   main
+         8   -> OsWrapper::Rtos::CreateThread<ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::CreateThread<LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::CreateThread<MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority)
+         8   -> OsWrapper::Rtos::Start()
+       0   std::_Addressof<ILedToggleable *>(ILedToggleable *&, std::false_type) noexcept
+       0   std::_Array_const_iterator<ILedToggleable *, 4U>::_Array_const_iterator(ILedToggleable *const *, size_t)
+      16   std::_Array_const_iterator<ILedToggleable *, 4U>::operator!=(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+        16   -> std::_Array_const_iterator<ILedToggleable *, 4U>::operator==(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+       0   std::_Array_const_iterator<ILedToggleable *, 4U>::operator*() const
+       0   std::_Array_const_iterator<ILedToggleable *, 4U>::operator++()
+       0   std::_Array_const_iterator<ILedToggleable *, 4U>::operator==(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+       8   std::_Array_const_iterator<ILedToggleable *, 4U>::subobject _Array_const_iterator(ILedToggleable *const *, size_t)
+         8   -> std::_Array_const_iterator<ILedToggleable *, 4U>::_Array_const_iterator(ILedToggleable *const *, size_t)
+      16   std::_Array_iterator<ILedToggleable *, 4U>::_Array_iterator(ILedToggleable **, size_t)
+        16   -> std::_Array_const_iterator<ILedToggleable *, 4U>::subobject _Array_const_iterator(ILedToggleable *const *, size_t)
+       8   std::_Array_iterator<ILedToggleable *, 4U>::operator*() const
+         8   -> std::_Array_const_iterator<ILedToggleable *, 4U>::operator*() const
+       8   std::_Array_iterator<ILedToggleable *, 4U>::operator++()
+         8   -> std::_Array_const_iterator<ILedToggleable *, 4U>::operator++()
+       8   std::addressof<ILedToggleable *>(ILedToggleable *&) noexcept
+         8   -> std::_Addressof<ILedToggleable *>(ILedToggleable *&, std::false_type) noexcept
+      16   std::array<ILedToggleable *, 4U>::begin() noexcept
+        16   -> std::_Array_iterator<ILedToggleable *, 4U>::_Array_iterator(ILedToggleable **, size_t)
+        16   -> std::addressof<ILedToggleable *>(ILedToggleable *&) noexcept
+      16   std::array<ILedToggleable *, 4U>::end() noexcept
+        16   -> std::_Array_iterator<ILedToggleable *, 4U>::_Array_iterator(ILedToggleable **, size_t)
+        16   -> std::addressof<ILedToggleable *>(ILedToggleable *&) noexcept
+       0   std::array<ILedToggleable *, 4U>::operator[](size_t)
+       0   std::array<IMode *, 2U>::operator[](size_t)
+       0   std::array<uint32_t, 256U>::data() noexcept
+       0   std::array<uint8_t, 1U>::data() noexcept
+       0   std::chrono::duration<__int64_t, std::milli>::count() const
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_12
+       4  ??DataTable1_13
+       4  ??DataTable1_14
+       4  ??DataTable1_15
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+      16  ?_0
+      12  ?_1
+      12  ?_2
+      24  Button<1'073'874'960U, 13U, true>::IsPressed()
+      52  ButtonTask::ButtonTask(IButton &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+      68  ChessMode<leds>::Execute()
+      68  ChessMode<leds>::Init()
+      16  FieldValueBase<ADC1_CR1_RES_Values<ADC1::CR1, 24U, 2U, ReadWriteMode, ADC1::ADC1CR1Base>, ADC1::ADC1CR1Base, 0U>::Set<ReadWriteMode, void>()
+      16  FieldValueBase<ADC1_CR2_CONT_Values<ADC1::CR2, 1U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 0U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<ADC1_CR2_EOCS_Values<ADC1::CR2, 10U, 1U, ReadWriteMode, ADC1::ADC1CR2Base>, ADC1::ADC1CR2Base, 1U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<ADC1_SMPR1_SMPx_x_Values<ADC1::SMPR1, 24U, 3U, ReadWriteMode, ADC1::ADC1SMPR1Base>, ADC1::ADC1SMPR1Base, 4U>::Set<ReadWriteMode, void>()
+      16  FieldValueBase<ADC1_SQR1_L_Values<ADC1::SQR1, 20U, 4U, ReadWriteMode, ADC1::ADC1SQR1Base>, ADC1::ADC1SQR1Base, 0U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<ADC1_SQR3_SQ1_Values<ADC1::SQR3, 0U, 5U, ReadWriteMode, ADC1::ADC1SQR3Base>, ADC1::ADC1SQR3Base, 18U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<ADC_Common_CCR_TSVREFE_Values<ADC_Common::CCR, 23U, 1U, ReadWriteMode, ADC_Common::ADC_CommonCCRBase>, ADC_Common::ADC_CommonCCRBase, 1U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<GPIOA_MODER_MODER15_Values<GPIOA::MODER, 10U, 2U, ReadWriteMode, GPIOA::GPIOAMODERBase>, GPIOA::GPIOAMODERBase, 1U>::Set<ReadWriteMode, void>()
+      24  FieldValueBase<RCC_CFGR_SWS_Values<RCC::CFGR, 2U, 2U, ReadMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::IsSet<ReadMode, void>()
+      16  FieldValueBase<RCC_CFGR_SW_Values<RCC::CFGR, 0U, 2U, ReadWriteMode, RCC::RCCCFGRBase>, RCC::RCCCFGRBase, 0U>::Set<ReadWriteMode, void>()
+      20  FieldValueBase<RCC_CR_HSION_Values<RCC::CR, 0U, 1U, ReadWriteMode, RCC::RCCCRBase>, RCC::RCCCRBase, 1U>::Set<ReadWriteMode, void>()
+      24  FieldValueBase<RCC_CR_HSIRDY_Values<RCC::CR, 1U, 1U, ReadMode, RCC::RCCCRBase>, RCC::RCCCRBase, 0U>::IsSet<ReadMode, void>()
+       2  IFilter::IFilter() noexcept
+      12  IFilter::subobject IFilter() noexcept
+      16  Led<1'073'872'916U, 5U>::SwitchOff()
+      16  Led<1'073'872'916U, 5U>::Toggle()
+      16  Led<1'073'874'964U, 5U>::SwitchOff()
+      16  Led<1'073'874'964U, 5U>::Toggle()
+      16  Led<1'073'874'964U, 8U>::SwitchOff()
+      16  Led<1'073'874'964U, 8U>::Toggle()
+      16  Led<1'073'874'964U, 9U>::SwitchOff()
+      16  Led<1'073'874'964U, 9U>::Toggle()
+      52  LedManagerTask::LedManagerTask(IModeManager &, std::chrono::milliseconds, OsWrapper::MailBox<bool, 1U> &)
+      40  MeasureTask::MeasureTask(std::chrono::milliseconds, IFilter &)
+      28  ModeManager<modes>::Init()
+      44  ModeManager<modes>::SetNextMode()
+      28  ModeManager<modes>::Update()
+      10  OsWrapper::IThread::IThread() noexcept
+      20  OsWrapper::IThread::Run()
+      12  OsWrapper::IThread::subobject IThread() noexcept
+      30  OsWrapper::MailBox<bool, 1U>::MailBox()
+      14  OsWrapper::MailBox<bool, 1U>::~MailBox() noexcept
+      36  OsWrapper::Rtos::CreateThread<ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority)
+      36  OsWrapper::Rtos::CreateThread<LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority)
+      36  OsWrapper::Rtos::CreateThread<MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority)
+      12  OsWrapper::Rtos::Run(void *)
+       8  OsWrapper::Rtos::Start()
+      56  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, ButtonTask>(ButtonTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+      56  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, LedManagerTask>(LedManagerTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+      56  OsWrapper::RtosWrapper::wCreateThread<OsWrapper::Rtos, MeasureTask>(MeasureTask &, char const *, OsWrapper::ThreadPriority, uint16_t, uint32_t *)
+       8  OsWrapper::RtosWrapper::wGetTicks()
+      32  OsWrapper::RtosWrapper::wMailBoxCreate(uint16_t, uint16_t, uint8_t *, StaticQueue_t &)
+      12  OsWrapper::RtosWrapper::wMailBoxDelete(void * &)
+       8  OsWrapper::RtosWrapper::wStart()
+      14  OsWrapper::Thread<256U>::Thread() noexcept
+      12  OsWrapper::Thread<256U>::subobject Thread() noexcept
+      68  RCFilter::RCFilter(float, tRc)
+      28  Register<1'073'874'944U, 32U, ReadWriteMode, GPIOC::GPIOCMODERBase, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 10U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 16U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output, GPIOC_MODER_MODER15_Values<GPIOC::MODER, 18U, 2U, ReadWriteMode, GPIOC::GPIOCMODERBase>::Output>::Set<ReadWriteMode, void>()
+      20  Register<1'073'887'280U, 32U, ReadWriteMode, RCC::RCCAHB1ENRBase, RCC_AHB1ENR_GPIOCEN_Values<RCC::AHB1ENR, 2U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable, RCC_AHB1ENR_GPIOAEN_Values<RCC::AHB1ENR, 0U, 1U, ReadWriteMode, RCC::RCCAHB1ENRBase>::Enable>::Set<ReadWriteMode, void>()
+      20  Register<1'073'887'300U, 32U, ReadWriteMode, RCC::RCCAPB2ENRBase, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 8U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable, RCC_AHB1ENR_DMA2EN_Values<RCC::APB2ENR, 14U, 1U, ReadWriteMode, RCC::RCCAPB2ENRBase>::Enable>::Set<ReadWriteMode, void>()
+       4  SystemCoreClock
+      44  TreeMode<leds>::Execute()
+      40  TreeMode<leds>::Init()
+      74  __low_level_init
+     154  __sti__routine()
+       4  button
+   1'136  buttonTask
+       4  chessMode
+       4  led1
+       4  led2
+       4  led3
+       4  led4
+   1'136  ledManagerTask
+      16  leds
+      80  mailBox
+      40  main
+       4  mask
+       4  mask
+       4  mask
+   1'128  measureTask
+       8  modeManager
+       8  modes
+       8  rc
+      20  rcFilter
+       8  sampleTime
+       2  std::_Addressof<ILedToggleable *>(ILedToggleable *&, std::false_type) noexcept
+       8  std::_Array_const_iterator<ILedToggleable *, 4U>::_Array_const_iterator(ILedToggleable *const *, size_t)
+      28  std::_Array_const_iterator<ILedToggleable *, 4U>::operator!=(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+       4  std::_Array_const_iterator<ILedToggleable *, 4U>::operator*() const
+       8  std::_Array_const_iterator<ILedToggleable *, 4U>::operator++()
+      18  std::_Array_const_iterator<ILedToggleable *, 4U>::operator==(std::_Array_const_iterator<ILedToggleable *, 4U> const &) const
+      12  std::_Array_const_iterator<ILedToggleable *, 4U>::subobject _Array_const_iterator(ILedToggleable *const *, size_t)
+      22  std::_Array_iterator<ILedToggleable *, 4U>::_Array_iterator(ILedToggleable **, size_t)
+      12  std::_Array_iterator<ILedToggleable *, 4U>::operator*() const
+      14  std::_Array_iterator<ILedToggleable *, 4U>::operator++()
+      20  std::addressof<ILedToggleable *>(ILedToggleable *&) noexcept
+      24  std::array<ILedToggleable *, 4U>::begin() noexcept
+      24  std::array<ILedToggleable *, 4U>::end() noexcept
+       6  std::array<ILedToggleable *, 4U>::operator[](size_t)
+       6  std::array<IMode *, 2U>::operator[](size_t)
+       2  std::array<uint32_t, 256U>::data() noexcept
+       2  std::array<uint8_t, 1U>::data() noexcept
+       6  std::chrono::duration<__int64_t, std::milli>::count() const
+       8  treeMode
+       4  value
+       4  value
+       4  value
+     701  -- Other
+
+ 
+ 3'500 bytes in section .bss
+    68 bytes in section .data
+     4 bytes in section .init_array
+   777 bytes in section .rodata
+ 2'016 bytes in section .text
+ 
+   336 bytes of CODE  memory (+ 1'684 bytes shared)
+    73 bytes of CONST memory (+   704 bytes shared)
+ 3'568 bytes of DATA  memory
+
+Errors: none
+Warnings: none
