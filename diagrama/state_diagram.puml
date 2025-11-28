@@ -1,0 +1,6 @@
+@startuml
+[*] --> Idle
+
+Idle --> Measuring : StartMeasurement
+Measuring --> Idle : MeasurementComplete
+@enduml

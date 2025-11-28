@@ -1,0 +1,73 @@
+@startuml
+interface IToggleable {
+    void Toggle()
+}
+
+interface ISwitcher {
+    void TurnOn()
+    void TurnOff()
+}
+
+class TreeMode {
+    Mode(leds: ILed[])
+    void Execute()
+}
+
+TreeMode -up-|> IMode
+TreeMode o-- Led
+
+class Led {
+    Led(adress: int, pinNumber: int)
+    void Toggle()
+    void TurnOn()
+    void TurnOff()
+}
+
+Led -up-|> IToggleable
+Led -up-|> ISwitcher
+
+interface IMode {
+    void Execute()
+}
+
+class ChessMode {
+    int mActiveLEDId
+    Mode(leds: ILed[])
+    void Execute()
+}
+
+ChessMode -up-|> IMode
+ChessMode o-- Led
+
+interface IButton {
+    void IsPressed()
+}
+
+class Button {
+    void IsPressed()
+}
+
+Button -up-|> IButton
+
+class AllMode {
+    Mode(leds: ILed[])
+    void Execute()
+}
+
+AllMode -up-|> IMode
+AllMode o-- Led
+
+interface IModeManager {
+    void SetNextMode()
+    void Update()
+}
+
+class ModeManager {
+    Modes(modes[]: IMode)
+    void SetNextMode()
+    void Update()
+}
+
+ModeManager -up-|> IModeManager
+ModeManager o-- IMode
+@enduml

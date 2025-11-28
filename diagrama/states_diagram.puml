@@ -1,0 +1,21 @@
+@startuml
+class Context {
+
+}
+ 
+interface IState {
+    void Execute()
+}
+
+class ConcreteStateA {
+    void Execute()
+}
+
+class ConcreteStateB {
+    void Execute()
+}
+
+Context o-- IState
+IState <|-- ConcreteStateA
+IState <|-- ConcreteStateB
+@enduml

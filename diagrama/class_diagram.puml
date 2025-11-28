@@ -1,0 +1,13 @@
+@startuml
+class Sensor {
+  + int id
+  + float value
+  + measure()
+}
+
+class Controller {
+  + processData()
+}
+
+Sensor --> Controller
+@enduml
